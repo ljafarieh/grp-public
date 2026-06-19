@@ -183,3 +183,70 @@ def _build_eia_demand(settings: Settings) -> PipelineStage:
 # register_stage("pjm_lmp", _build_pjm_lmp, "PJM 5-min ex-post LMP by pricing node")
 # register_stage("pjm_constraints", _build_pjm_constraints, "PJM binding transmission constraints")
 register_stage("eia_demand", _build_eia_demand, "EIA hourly PJM-region electricity demand")
+
+
+# ---------------------------------------------------------------------------
+# GRP regulatory scraper stages
+# ---------------------------------------------------------------------------
+
+
+def _build_va_scc(settings: Settings) -> PipelineStage:
+    from fosbury.extractors.va_scc import VirginiaSCCScraper
+    from fosbury.loaders.grid_event_loader import GridEventLoader
+    from fosbury.transformers.regulatory import RegulatoryTransformer
+
+    settings.ensure_storage_dirs()
+    return PipelineStage(
+        source_key="va_scc",
+        extractor=VirginiaSCCScraper(settings),
+        transformer=RegulatoryTransformer("va_scc"),
+        loaders=[GridEventLoader(settings.sqlite_path)],
+    )
+
+
+def _build_ohio_puco(settings: Settings) -> PipelineStage:
+    from fosbury.extractors.ohio_puco import OhioPUCOScraper
+    from fosbury.loaders.grid_event_loader import GridEventLoader
+    from fosbury.transformers.regulatory import RegulatoryTransformer
+
+    settings.ensure_storage_dirs()
+    return PipelineStage(
+        source_key="ohio_puco",
+        extractor=OhioPUCOScraper(settings),
+        transformer=RegulatoryTransformer("ohio_puco"),
+        loaders=[GridEventLoader(settings.sqlite_path)],
+    )
+
+
+def _build_pa_puc(settings: Settings) -> PipelineStage:
+    from fosbury.extractors.pa_puc import PaPUCScraper
+    from fosbury.loaders.grid_event_loader import GridEventLoader
+    from fosbury.transformers.regulatory import RegulatoryTransformer
+
+    settings.ensure_storage_dirs()
+    return PipelineStage(
+        source_key="pa_puc",
+        extractor=PaPUCScraper(settings),
+        transformer=RegulatoryTransformer("pa_puc"),
+        loaders=[GridEventLoader(settings.sqlite_path)],
+    )
+
+
+def _build_ferc(settings: Settings) -> PipelineStage:
+    from fosbury.extractors.ferc import FERCScraper
+    from fosbury.loaders.grid_event_loader import GridEventLoader
+    from fosbury.transformers.regulatory import RegulatoryTransformer
+
+    settings.ensure_storage_dirs()
+    return PipelineStage(
+        source_key="ferc",
+        extractor=FERCScraper(settings),
+        transformer=RegulatoryTransformer("ferc"),
+        loaders=[GridEventLoader(settings.sqlite_path)],
+    )
+
+
+register_stage("va_scc", _build_va_scc, "Virginia SCC daily docket — Dominion Energy transmission delays")
+register_stage("ohio_puco", _build_ohio_puco, "Ohio PUCO — AEP data center load impact studies")
+register_stage("pa_puc", _build_pa_puc, "PA PUC — Constellation/Talen nuclear co-location protests")
+register_stage("ferc", _build_ferc, "FERC eLibrary — Section 205/206 co-location filings")

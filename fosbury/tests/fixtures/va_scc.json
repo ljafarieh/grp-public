@@ -1,0 +1,26 @@
+[
+  {
+    "event_id": "va_scc_stub_001",
+    "iso_region": "PJM",
+    "state_jurisdiction": "VA",
+    "entity_target": "Dominion Energy",
+    "data_type": "EQUIPMENT_DELAY",
+    "raw_text_blob": "Dominion Energy Virginia has filed for a 180-day extension on the Loudoun County 500kV substation upgrade due to transformer procurement delays. Equipment backlog from the primary vendor has pushed the expected energization date from Q3 2025 to Q1 2026. The substation serves the primary interconnection point for three large-load data center facilities in Ashburn, VA currently awaiting commercial operation.",
+    "metric_delta": 180,
+    "keywords_matched": ["transformer procurement", "substation hold", "energization delay"],
+    "source_url": "https://scc.virginia.gov/docketing/case/PUE-2024-00123/filing001.pdf",
+    "scraped_at": "2026-06-19T15:00:00"
+  },
+  {
+    "event_id": "va_scc_stub_002",
+    "iso_region": "PJM",
+    "state_jurisdiction": "VA",
+    "entity_target": "Dominion Energy",
+    "data_type": "REGULATORY_PROTEST",
+    "raw_text_blob": "The Office of the Attorney General of Virginia has submitted a formal protest to the State Corporation Commission regarding Dominion Energy's proposed large-load tariff amendments. The protest alleges that the proposed rate structure improperly shifts right-of-way acquisition delay costs from hyperscale data center operators onto residential ratepayers across the Dominion service territory.",
+    "metric_delta": 0,
+    "keywords_matched": ["protest", "right-of-way acquisition delay", "ratepayer", "cost-shifting"],
+    "source_url": "https://scc.virginia.gov/docketing/case/PUE-2024-00189/protest001.pdf",
+    "scraped_at": "2026-06-19T15:00:00"
+  }
+]

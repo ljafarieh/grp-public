@@ -1,0 +1,14 @@
+[
+  {
+    "event_id": "ohio_puco_stub_001",
+    "iso_region": "PJM",
+    "state_jurisdiction": "OH",
+    "entity_target": "American Electric Power",
+    "data_type": "QUEUE_MILESTONE",
+    "raw_text_blob": "American Electric Power filed a system impact study update indicating that the Columbus data center interconnection cluster has withdrawn 24,300 MW of uncommitted capacity requests following implementation of the take-or-pay tariff. Expected commercial operation dates have been extended by an average of 14 months across the affected queue positions. AEP projects that confirmed contracted load has declined from 30,000 MW to 5,700 MW of bankable demand.",
+    "metric_delta": 420,
+    "keywords_matched": ["commercial operation date", "queue withdrawal", "cost allocation"],
+    "source_url": "https://dis.puc.state.oh.us/CaseRecord/case/EL-2024-00456/attachment_SIS.pdf",
+    "scraped_at": "2026-06-19T15:00:00"
+  }
+]

@@ -40,3 +40,23 @@ def pjm_constraints_raw() -> dict:
 @pytest.fixture()
 def eia_demand_raw() -> dict:
     return json.loads((FIXTURE_DIR / "eia_demand.json").read_text())
+
+
+@pytest.fixture()
+def va_scc_raw() -> list:
+    return json.loads((FIXTURE_DIR / "va_scc.json").read_text())
+
+
+@pytest.fixture()
+def ohio_puco_raw() -> list:
+    return json.loads((FIXTURE_DIR / "ohio_puco.json").read_text())
+
+
+@pytest.fixture()
+def pa_puc_raw() -> list:
+    return json.loads((FIXTURE_DIR / "pa_puc.json").read_text())
+
+
+@pytest.fixture()
+def ferc_raw() -> list:
+    return json.loads((FIXTURE_DIR / "ferc.json").read_text())

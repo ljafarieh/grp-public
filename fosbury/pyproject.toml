@@ -19,6 +19,7 @@ dependencies = [
     "structlog>=24.1",
     "python-dotenv>=1.0",
     "rich>=13.7",          # pretty CLI output
+    "beautifulsoup4>=4.12",
 ]
 
 [project.optional-dependencies]

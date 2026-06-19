@@ -44,6 +44,10 @@ class Settings(BaseSettings):
         default="",
         description="PJM Data Miner subscription key. Leave blank to use public endpoints only.",
     )
+    discord_webhook_url: str = Field(
+        default="",
+        description="Discord webhook URL for GRP research alerts. Leave blank to disable.",
+    )
 
     # -- Behaviour --------------------------------------------------------
     stub_mode: bool = Field(

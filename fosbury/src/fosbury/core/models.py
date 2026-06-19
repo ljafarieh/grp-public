@@ -143,6 +143,65 @@ class DemandDataset(BaseModel):
 
 
 # ---------------------------------------------------------------------------
+# Grid Realization Pipeline — regulatory event models
+# ---------------------------------------------------------------------------
+
+# Valid categories from the GRP universal schema
+DATA_TYPES = {"QUEUE_MILESTONE", "REGULATORY_PROTEST", "EQUIPMENT_DELAY"}
+
+
+class GridEvent(BaseModel):
+    """A single normalised regulatory or grid event from any scraper.
+
+    The ``event_id`` is a SHA-256 hash of (source_url + raw_text_blob[:200])
+    so the same filing never produces duplicate rows even across re-runs.
+    """
+
+    event_id: str
+    iso_region: str                  # e.g. "PJM", "ERCOT"
+    state_jurisdiction: str          # e.g. "VA", "OH", "PA", "FEDERAL"
+    entity_target: str               # corporate name, e.g. "Dominion Energy"
+    data_type: str                   # one of DATA_TYPES
+    raw_text_blob: str               # cleaned excerpt ≤ 2000 chars
+    metric_delta: int = 0            # quantified delay in calendar days
+    keywords_matched: list[str] = Field(default_factory=list)
+    source_url: str = ""
+    scraped_at: datetime = Field(default_factory=datetime.utcnow)
+    alert_sent: bool = False
+
+    @field_validator("data_type")
+    @classmethod
+    def validate_data_type(cls, v: str) -> str:
+        if v not in DATA_TYPES:
+            raise ValueError(f"data_type must be one of {DATA_TYPES}, got '{v}'")
+        return v
+
+    @field_validator("scraped_at", mode="before")
+    @classmethod
+    def parse_scraped_at(cls, v: object) -> datetime:
+        if isinstance(v, datetime):
+            return v
+        return datetime.fromisoformat(str(v))
+
+    @field_validator("raw_text_blob")
+    @classmethod
+    def truncate_blob(cls, v: str) -> str:
+        return v[:2000]
+
+
+class GridEventDataset(BaseModel):
+    """Collection of GridEvent records from one scraper run."""
+
+    source: str
+    fetched_at: datetime = Field(default_factory=datetime.utcnow)
+    records: list[GridEvent]
+
+    @property
+    def row_count(self) -> int:
+        return len(self.records)
+
+
+# ---------------------------------------------------------------------------
 # Pipeline run-result model (returned by Pipeline.run)
 # ---------------------------------------------------------------------------
 

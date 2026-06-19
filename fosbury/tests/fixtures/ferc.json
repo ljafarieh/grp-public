@@ -1,0 +1,26 @@
+[
+  {
+    "event_id": "ferc_stub_001",
+    "iso_region": "PJM",
+    "state_jurisdiction": "FEDERAL",
+    "entity_target": "Talen Energy",
+    "data_type": "REGULATORY_PROTEST",
+    "raw_text_blob": "FERC issued a Show Cause order under FPA Section 206 regarding Talen Energy's Cumulus Data co-location arrangement at Susquehanna Steam Electric Station. The Commission identified concerns about net injection configurations and directed Talen to demonstrate compliance within 90 days or face a formal contract restudy. An intervening party representing industrial ratepayers has further alleged that the behind-the-meter arrangement improperly circumvents PJM's interconnection queue process.",
+    "metric_delta": 90,
+    "keywords_matched": ["show cause", "co-location", "restudy", "net injection", "behind-the-meter", "protest"],
+    "source_url": "https://elibrary.ferc.gov/eLibrary/filelist?accession=20240615-5000",
+    "scraped_at": "2026-06-19T15:00:00"
+  },
+  {
+    "event_id": "ferc_stub_002",
+    "iso_region": "PJM",
+    "state_jurisdiction": "FEDERAL",
+    "entity_target": "Constellation Energy",
+    "data_type": "REGULATORY_PROTEST",
+    "raw_text_blob": "FERC received a Section 206 complaint from the PJM Independent Market Monitor alleging that Constellation Energy's proposed nuclear co-location tariff unfairly shifts transmission cost allocation obligations from the co-located data center operator to other PJM market participants. The IMM requests a formal evidentiary hearing and interim injunctive relief pending resolution.",
+    "metric_delta": 0,
+    "keywords_matched": ["protest", "co-location", "cost allocation", "intervention", "independent market monitor"],
+    "source_url": "https://elibrary.ferc.gov/eLibrary/filelist?accession=20240701-3210",
+    "scraped_at": "2026-06-19T15:00:00"
+  }
+]

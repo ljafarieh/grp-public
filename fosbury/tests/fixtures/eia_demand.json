@@ -1,0 +1,36 @@
+{
+  "response": {
+    "total": 3,
+    "dateFormat": "YYYY-MM-DDTHH",
+    "frequency": "hourly",
+    "data": [
+      {
+        "period": "2026-06-18T00",
+        "respondent": "PJM",
+        "respondent-name": "PJM Interconnection, LLC",
+        "type": "D",
+        "type-name": "Demand",
+        "value": 112500,
+        "value-units": "megawatthours"
+      },
+      {
+        "period": "2026-06-18T01",
+        "respondent": "PJM",
+        "respondent-name": "PJM Interconnection, LLC",
+        "type": "D",
+        "type-name": "Demand",
+        "value": 108200,
+        "value-units": "megawatthours"
+      },
+      {
+        "period": "2026-06-18T02",
+        "respondent": "PJM",
+        "respondent-name": "PJM Interconnection, LLC",
+        "type": "D",
+        "type-name": "Demand",
+        "value": 105800,
+        "value-units": "megawatthours"
+      }
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "totalRows": 2,
+  "items": [
+    {
+      "datetime_beginning_utc": "2026-06-18T00:00:00",
+      "datetime_beginning_ept": "2026-06-17T20:00:00",
+      "constraint_name": "BEDINGTON-DOUBS 500",
+      "contingency": "N-1 BEDINGTON-DOUBS 765",
+      "shadow_price": 45.75,
+      "mw_flow": 1820.5,
+      "mw_limit": 2000.0
+    },
+    {
+      "datetime_beginning_utc": "2026-06-18T00:05:00",
+      "datetime_beginning_ept": "2026-06-17T20:05:00",
+      "constraint_name": "GREENSBURG-LATROBE 138",
+      "contingency": "BASE CASE",
+      "shadow_price": 12.30,
+      "mw_flow": 340.0,
+      "mw_limit": 350.0
+    }
+  ]
+}

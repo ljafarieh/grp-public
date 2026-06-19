@@ -1,0 +1,181 @@
+# AI-Compute Buildout Research Universe
+#
+# IMPORTANT: Inclusion of any ticker here is a RESEARCH CHOICE, not a
+# recommendation to buy, sell, or hold any security. This universe exists
+# to test a specific macro thesis against market data. It is not financial
+# advice, an endorsement, or an opinion on any company's investment merit.
+#
+# Thesis source: Leopold Aschenbrenner, "Situational Awareness: The Decade
+# Ahead" (June 2024). Treated here as a TESTABLE HYPOTHESIS, not as fact.
+# Tags represent each ticker's role in the AI-buildout supply chain.
+
+# ---------------------------------------------------------------------------
+# Analysis parameters (tune these without touching code)
+# ---------------------------------------------------------------------------
+analysis:
+  # Move detection
+  vol_window: 20          # trailing days used to estimate realized volatility
+  move_zscore_threshold: 2.0   # flag daily return if |z-score| >= this
+  volume_spike_multiplier: 2.0 # flag volume if today > N × 20-day avg volume
+
+  # News
+  news_source: yfinance   # "yfinance" (default, free), "rss" (fallback), or "newsapi" (free key required)
+  news_lookback_days: 3   # how many calendar days of headlines to consider
+  max_headlines_per_ticker: 10
+
+tickers:
+
+  # --- COMPUTE / SEMICONDUCTORS ---
+  # Design, fabricate, and supply the chips that run frontier-AI training.
+  NVDA:
+    name: NVIDIA Corporation
+    sector: Technology
+    thesis_role: compute_semis
+    notes: Dominant GPU supplier for AI training workloads
+
+  AMD:
+    name: Advanced Micro Devices
+    sector: Technology
+    thesis_role: compute_semis
+    notes: GPU/CPU competitor; data-center segment growing
+
+  TSM:
+    name: Taiwan Semiconductor Manufacturing (ADR)
+    sector: Technology
+    thesis_role: compute_semis
+    notes: Foundry for most leading-edge AI chips
+
+  AVGO:
+    name: Broadcom Inc.
+    sector: Technology
+    thesis_role: compute_semis
+    notes: Networking chips + custom AI ASICs (XPUs) for hyperscalers
+
+  ASML:
+    name: ASML Holding (ADR)
+    sector: Technology
+    thesis_role: compute_semis
+    notes: Sole supplier of EUV lithography equipment; upstream chokepoint
+
+  # --- POWER GENERATION ---
+  # Thesis predicts power demand becomes the binding constraint; these
+  # companies generate or develop large-scale electricity.
+  VST:
+    name: Vistra Corp.
+    sector: Utilities
+    thesis_role: power_generation
+    notes: Largest competitive power generator; nuclear + gas fleet
+
+  CEG:
+    name: Constellation Energy
+    sector: Utilities
+    thesis_role: power_generation
+    notes: Largest US nuclear operator; data-center PPAs
+
+  NRG:
+    name: NRG Energy
+    sector: Utilities
+    thesis_role: power_generation
+    notes: Large competitive retail + generation player
+
+  GEV:
+    name: GE Vernova
+    sector: Industrials
+    thesis_role: power_generation
+    notes: Gas turbines, wind, grid equipment — cross-tags grid_transmission
+
+  # --- GRID / ELECTRICAL EQUIPMENT ---
+  # Transmission infrastructure and equipment required to deliver new power
+  # to data-center campuses.
+  ETN:
+    name: Eaton Corporation
+    sector: Industrials
+    thesis_role: electrical_equipment
+    notes: Electrical components, switchgear, UPS systems for data centers
+
+  PWR:
+    name: Quanta Services
+    sector: Industrials
+    thesis_role: grid_transmission
+    notes: Electric grid construction and engineering services
+
+  ABBNY:
+    name: ABB Ltd (ADR)
+    sector: Industrials
+    thesis_role: electrical_equipment
+    notes: Transformers, grid automation; multi-year order backlog
+
+  # --- DATACENTER REITs ---
+  # Own and lease the physical infrastructure that houses AI compute.
+  EQIX:
+    name: Equinix Inc.
+    sector: Real Estate
+    thesis_role: datacenter_reit
+    notes: Global colocation leader; interconnection density
+
+  DLR:
+    name: Digital Realty Trust
+    sector: Real Estate
+    thesis_role: datacenter_reit
+    notes: Hyperscale data-center landlord
+
+  # --- CRITICAL MINERALS ---
+  # Rare earths and specialty materials used in motors, magnets, and
+  # electronics across the supply chain.
+  MP:
+    name: MP Materials Corp.
+    sector: Materials
+    thesis_role: critical_minerals
+    notes: Only US rare-earth miner at scale
+
+  REMX:
+    name: VanEck Rare Earth/Strategic Metals ETF
+    sector: Materials
+    thesis_role: critical_minerals
+    notes: Broad rare-earth/critical-mineral ETF proxy; not a single stock
+
+  # --- URANIUM / NUCLEAR FUEL ---
+  # Nuclear power is being repositioned as a long-duration, carbon-free
+  # baseload source for data centers.
+  CCJ:
+    name: Cameco Corporation
+    sector: Energy
+    thesis_role: uranium_fuel
+    notes: Largest Western uranium producer
+
+  URA:
+    name: Global X Uranium ETF
+    sector: Energy
+    thesis_role: uranium_fuel
+    notes: Broad uranium sector ETF proxy
+
+  # --- COOLING / THERMAL MANAGEMENT ---
+  # Data centers dissipate enormous heat; liquid and immersion cooling is
+  # a growing physical constraint.
+  # (Placeholder — most pure-plays are private or small-cap. Expand here.)
+
+  # --- BENCHMARKS ---
+  # Used for relative performance comparison only; not thesis plays.
+  SPY:
+    name: SPDR S&P 500 ETF
+    sector: Benchmark
+    thesis_role: benchmark
+    notes: Broad market reference
+
+  QQQ:
+    name: Invesco QQQ Trust (Nasdaq-100)
+    sector: Benchmark
+    thesis_role: benchmark
+    notes: Tech-heavy market reference
+
+  XLU:
+    name: Utilities Select Sector SPDR
+    sector: Benchmark
+    thesis_role: benchmark
+    notes: Utilities sector reference; thesis predicts outperformance vs this
+
+  XLE:
+    name: Energy Select Sector SPDR
+    sector: Benchmark
+    thesis_role: benchmark
+    notes: Energy sector reference

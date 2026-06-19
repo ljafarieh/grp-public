@@ -28,6 +28,7 @@ from analysis.lookahead import run_lookahead_audit
 from analysis.oos import run_oos_validation
 from analysis.multiple_testing import build_multiple_testing_audit
 from reporting.report import write_report
+from reporting.pdf_report import write_pdf_report
 
 logging.basicConfig(
     level=logging.INFO,
@@ -247,6 +248,8 @@ def main() -> None:
                         help="Write a dated markdown report to reports/YYYY-MM-DD.md")
     parser.add_argument("--validate", action="store_true",
                         help="Run Phase 4 validation (lookahead audit, OOS, multiple-testing)")
+    parser.add_argument("--pdf", action="store_true",
+                        help="Write a formatted PDF report to reports/YYYY-MM-DD.pdf")
     args = parser.parse_args()
 
     as_of = date.fromisoformat(args.date) if args.date else date.today() - timedelta(days=1)
@@ -385,9 +388,22 @@ def main() -> None:
         )
         print(f"\nReport written to: {report_path}")
 
+    # --- PDF report ---
+    if args.pdf:
+        pdf_path = write_pdf_report(
+            as_of=as_of,
+            attributed=attributed,
+            shifts=shifts,
+            lead_lag=lead_lag,
+            scorecard=scorecard,
+            rotation=rotation,
+        )
+        print(f"\nPDF report written to: {pdf_path}")
+
     print(f"\nRun complete.")
     print("  --skip-ingest   re-run analysis on cached data only")
     print("  --report        write dated markdown to reports/")
+    print("  --pdf           write formatted PDF to reports/")
     print("  --validate      run Phase 4 lookahead + OOS + multiple-testing audit\n")
 
 

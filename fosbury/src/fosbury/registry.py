@@ -178,6 +178,8 @@ def _build_eia_demand(settings: Settings) -> PipelineStage:
     )
 
 
-register_stage("pjm_lmp", _build_pjm_lmp, "PJM 5-min ex-post LMP by pricing node")
-register_stage("pjm_constraints", _build_pjm_constraints, "PJM binding transmission constraints")
+# pjm_lmp and pjm_constraints require a PJM Data Miner subscription key.
+# Re-enable by uncommenting these two lines and setting PJM_API_KEY in .env.
+# register_stage("pjm_lmp", _build_pjm_lmp, "PJM 5-min ex-post LMP by pricing node")
+# register_stage("pjm_constraints", _build_pjm_constraints, "PJM binding transmission constraints")
 register_stage("eia_demand", _build_eia_demand, "EIA hourly PJM-region electricity demand")

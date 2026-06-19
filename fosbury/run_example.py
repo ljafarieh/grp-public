@@ -27,8 +27,7 @@ from fosbury.registry import build_pipeline_stages
 
 def main() -> None:
     settings = Settings(
-        stub_mode=True,          # ← flip to False + set API keys for live data
-        log_level="INFO",
+        _env_file=Path(__file__).parent / ".env",
         sqlite_path=Path("data/sqlite/fosbury.db"),
         parquet_dir=Path("data/parquet"),
     )
@@ -37,7 +36,8 @@ def main() -> None:
     settings.ensure_storage_dirs()
 
     print("=" * 60)
-    print("  Project Fosbury — PJM Energy-Grid ETL (stub mode)")
+    mode = "stub mode" if settings.stub_mode else "live mode"
+    print(f"  Project Fosbury — PJM Energy-Grid ETL ({mode})")
     print("=" * 60)
     print()
 

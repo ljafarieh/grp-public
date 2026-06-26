@@ -1,169 +1,505 @@
-timestamp_utc,respondent,respondent_name,value_mwh,type_name,loaded_at
-2026-06-12T15:00:00,PJM,"PJM Interconnection, LLC",118685,Demand,2026-06-19T15:16:40Z
-2026-06-12T16:00:00,PJM,"PJM Interconnection, LLC",122791,Demand,2026-06-19T15:16:40Z
-2026-06-12T17:00:00,PJM,"PJM Interconnection, LLC",127577,Demand,2026-06-19T15:16:40Z
-2026-06-12T18:00:00,PJM,"PJM Interconnection, LLC",131631,Demand,2026-06-19T15:16:40Z
-2026-06-12T19:00:00,PJM,"PJM Interconnection, LLC",135241,Demand,2026-06-19T15:16:40Z
-2026-06-12T20:00:00,PJM,"PJM Interconnection, LLC",137602,Demand,2026-06-19T15:16:40Z
-2026-06-12T21:00:00,PJM,"PJM Interconnection, LLC",139927,Demand,2026-06-19T15:16:40Z
-2026-06-12T22:00:00,PJM,"PJM Interconnection, LLC",140165,Demand,2026-06-19T15:16:40Z
-2026-06-12T23:00:00,PJM,"PJM Interconnection, LLC",137985,Demand,2026-06-19T15:16:40Z
-2026-06-13T00:00:00,PJM,"PJM Interconnection, LLC",133137,Demand,2026-06-19T15:16:40Z
-2026-06-13T01:00:00,PJM,"PJM Interconnection, LLC",127204,Demand,2026-06-19T15:16:40Z
-2026-06-13T02:00:00,PJM,"PJM Interconnection, LLC",121670,Demand,2026-06-19T15:16:40Z
-2026-06-13T03:00:00,PJM,"PJM Interconnection, LLC",115052,Demand,2026-06-19T15:16:40Z
-2026-06-13T04:00:00,PJM,"PJM Interconnection, LLC",108012,Demand,2026-06-19T15:16:40Z
-2026-06-13T05:00:00,PJM,"PJM Interconnection, LLC",101373,Demand,2026-06-19T15:16:40Z
-2026-06-13T06:00:00,PJM,"PJM Interconnection, LLC",96828,Demand,2026-06-19T15:16:40Z
-2026-06-13T07:00:00,PJM,"PJM Interconnection, LLC",92896,Demand,2026-06-19T15:16:40Z
-2026-06-13T08:00:00,PJM,"PJM Interconnection, LLC",89488,Demand,2026-06-19T15:16:40Z
-2026-06-13T09:00:00,PJM,"PJM Interconnection, LLC",87203,Demand,2026-06-19T15:16:40Z
-2026-06-13T10:00:00,PJM,"PJM Interconnection, LLC",86184,Demand,2026-06-19T15:16:40Z
-2026-06-13T11:00:00,PJM,"PJM Interconnection, LLC",86196,Demand,2026-06-19T15:16:40Z
-2026-06-13T12:00:00,PJM,"PJM Interconnection, LLC",89970,Demand,2026-06-19T15:16:40Z
-2026-06-13T13:00:00,PJM,"PJM Interconnection, LLC",95243,Demand,2026-06-19T15:16:40Z
-2026-06-13T14:00:00,PJM,"PJM Interconnection, LLC",100076,Demand,2026-06-19T15:16:40Z
-2026-06-13T15:00:00,PJM,"PJM Interconnection, LLC",104636,Demand,2026-06-19T15:16:40Z
-2026-06-13T16:00:00,PJM,"PJM Interconnection, LLC",107953,Demand,2026-06-19T15:16:40Z
-2026-06-13T17:00:00,PJM,"PJM Interconnection, LLC",110543,Demand,2026-06-19T15:16:40Z
-2026-06-13T18:00:00,PJM,"PJM Interconnection, LLC",114007,Demand,2026-06-19T15:16:40Z
-2026-06-13T19:00:00,PJM,"PJM Interconnection, LLC",117699,Demand,2026-06-19T15:16:40Z
-2026-06-13T20:00:00,PJM,"PJM Interconnection, LLC",121695,Demand,2026-06-19T15:16:40Z
-2026-06-13T21:00:00,PJM,"PJM Interconnection, LLC",124688,Demand,2026-06-19T15:16:40Z
-2026-06-13T22:00:00,PJM,"PJM Interconnection, LLC",126594,Demand,2026-06-19T15:16:40Z
-2026-06-13T23:00:00,PJM,"PJM Interconnection, LLC",126033,Demand,2026-06-19T15:16:40Z
-2026-06-14T00:00:00,PJM,"PJM Interconnection, LLC",122994,Demand,2026-06-19T15:16:40Z
-2026-06-14T01:00:00,PJM,"PJM Interconnection, LLC",117899,Demand,2026-06-19T15:16:40Z
-2026-06-14T02:00:00,PJM,"PJM Interconnection, LLC",113850,Demand,2026-06-19T15:16:40Z
-2026-06-14T03:00:00,PJM,"PJM Interconnection, LLC",107971,Demand,2026-06-19T15:16:40Z
-2026-06-14T04:00:00,PJM,"PJM Interconnection, LLC",101578,Demand,2026-06-19T15:16:40Z
-2026-06-14T05:00:00,PJM,"PJM Interconnection, LLC",96822,Demand,2026-06-19T15:16:40Z
-2026-06-14T06:00:00,PJM,"PJM Interconnection, LLC",92743,Demand,2026-06-19T15:16:40Z
-2026-06-14T07:00:00,PJM,"PJM Interconnection, LLC",89516,Demand,2026-06-19T15:16:40Z
-2026-06-14T08:00:00,PJM,"PJM Interconnection, LLC",86644,Demand,2026-06-19T15:16:40Z
-2026-06-14T09:00:00,PJM,"PJM Interconnection, LLC",84992,Demand,2026-06-19T15:16:40Z
-2026-06-14T10:00:00,PJM,"PJM Interconnection, LLC",84356,Demand,2026-06-19T15:16:40Z
-2026-06-14T11:00:00,PJM,"PJM Interconnection, LLC",84415,Demand,2026-06-19T15:16:40Z
-2026-06-14T12:00:00,PJM,"PJM Interconnection, LLC",86650,Demand,2026-06-19T15:16:40Z
-2026-06-14T13:00:00,PJM,"PJM Interconnection, LLC",91262,Demand,2026-06-19T15:16:40Z
-2026-06-14T14:00:00,PJM,"PJM Interconnection, LLC",96531,Demand,2026-06-19T15:16:40Z
-2026-06-14T15:00:00,PJM,"PJM Interconnection, LLC",101557,Demand,2026-06-19T15:16:40Z
-2026-06-14T16:00:00,PJM,"PJM Interconnection, LLC",105784,Demand,2026-06-19T15:16:40Z
-2026-06-14T17:00:00,PJM,"PJM Interconnection, LLC",111024,Demand,2026-06-19T15:16:40Z
-2026-06-14T18:00:00,PJM,"PJM Interconnection, LLC",115239,Demand,2026-06-19T15:16:40Z
-2026-06-14T19:00:00,PJM,"PJM Interconnection, LLC",118228,Demand,2026-06-19T15:16:40Z
-2026-06-14T20:00:00,PJM,"PJM Interconnection, LLC",119808,Demand,2026-06-19T15:16:40Z
-2026-06-14T21:00:00,PJM,"PJM Interconnection, LLC",119744,Demand,2026-06-19T15:16:40Z
-2026-06-14T22:00:00,PJM,"PJM Interconnection, LLC",119957,Demand,2026-06-19T15:16:40Z
-2026-06-14T23:00:00,PJM,"PJM Interconnection, LLC",118075,Demand,2026-06-19T15:16:40Z
-2026-06-15T00:00:00,PJM,"PJM Interconnection, LLC",114544,Demand,2026-06-19T15:16:40Z
-2026-06-15T01:00:00,PJM,"PJM Interconnection, LLC",111363,Demand,2026-06-19T15:16:40Z
-2026-06-15T02:00:00,PJM,"PJM Interconnection, LLC",107514,Demand,2026-06-19T15:16:40Z
-2026-06-15T03:00:00,PJM,"PJM Interconnection, LLC",102300,Demand,2026-06-19T15:16:40Z
-2026-06-15T04:00:00,PJM,"PJM Interconnection, LLC",96118,Demand,2026-06-19T15:16:40Z
-2026-06-15T05:00:00,PJM,"PJM Interconnection, LLC",91036,Demand,2026-06-19T15:16:40Z
-2026-06-15T06:00:00,PJM,"PJM Interconnection, LLC",88428,Demand,2026-06-19T15:16:40Z
-2026-06-15T07:00:00,PJM,"PJM Interconnection, LLC",87078,Demand,2026-06-19T15:16:40Z
-2026-06-15T08:00:00,PJM,"PJM Interconnection, LLC",85523,Demand,2026-06-19T15:16:40Z
-2026-06-15T09:00:00,PJM,"PJM Interconnection, LLC",85255,Demand,2026-06-19T15:16:40Z
-2026-06-15T10:00:00,PJM,"PJM Interconnection, LLC",86434,Demand,2026-06-19T15:16:40Z
-2026-06-15T11:00:00,PJM,"PJM Interconnection, LLC",88518,Demand,2026-06-19T15:16:40Z
-2026-06-15T12:00:00,PJM,"PJM Interconnection, LLC",92669,Demand,2026-06-19T15:16:40Z
-2026-06-15T13:00:00,PJM,"PJM Interconnection, LLC",95803,Demand,2026-06-19T15:16:40Z
-2026-06-15T14:00:00,PJM,"PJM Interconnection, LLC",97203,Demand,2026-06-19T15:16:40Z
-2026-06-15T15:00:00,PJM,"PJM Interconnection, LLC",97899,Demand,2026-06-19T15:16:40Z
-2026-06-15T16:00:00,PJM,"PJM Interconnection, LLC",99094,Demand,2026-06-19T15:16:40Z
-2026-06-15T17:00:00,PJM,"PJM Interconnection, LLC",100356,Demand,2026-06-19T15:16:40Z
-2026-06-15T18:00:00,PJM,"PJM Interconnection, LLC",101587,Demand,2026-06-19T15:16:40Z
-2026-06-15T19:00:00,PJM,"PJM Interconnection, LLC",102514,Demand,2026-06-19T15:16:40Z
-2026-06-15T20:00:00,PJM,"PJM Interconnection, LLC",103882,Demand,2026-06-19T15:16:40Z
-2026-06-15T21:00:00,PJM,"PJM Interconnection, LLC",105881,Demand,2026-06-19T15:16:40Z
-2026-06-15T22:00:00,PJM,"PJM Interconnection, LLC",107626,Demand,2026-06-19T15:16:40Z
-2026-06-15T23:00:00,PJM,"PJM Interconnection, LLC",107756,Demand,2026-06-19T15:16:40Z
-2026-06-16T00:00:00,PJM,"PJM Interconnection, LLC",106232,Demand,2026-06-19T15:16:40Z
-2026-06-16T01:00:00,PJM,"PJM Interconnection, LLC",103048,Demand,2026-06-19T15:16:40Z
-2026-06-16T02:00:00,PJM,"PJM Interconnection, LLC",100168,Demand,2026-06-19T15:16:40Z
-2026-06-16T03:00:00,PJM,"PJM Interconnection, LLC",95170,Demand,2026-06-19T15:16:40Z
-2026-06-16T04:00:00,PJM,"PJM Interconnection, LLC",88981,Demand,2026-06-19T15:16:40Z
-2026-06-16T05:00:00,PJM,"PJM Interconnection, LLC",84330,Demand,2026-06-19T15:16:40Z
-2026-06-16T06:00:00,PJM,"PJM Interconnection, LLC",81977,Demand,2026-06-19T15:16:40Z
-2026-06-16T07:00:00,PJM,"PJM Interconnection, LLC",80260,Demand,2026-06-19T15:16:40Z
-2026-06-16T08:00:00,PJM,"PJM Interconnection, LLC",79331,Demand,2026-06-19T15:16:40Z
-2026-06-16T09:00:00,PJM,"PJM Interconnection, LLC",79413,Demand,2026-06-19T15:16:40Z
-2026-06-16T10:00:00,PJM,"PJM Interconnection, LLC",81124,Demand,2026-06-19T15:16:40Z
-2026-06-16T11:00:00,PJM,"PJM Interconnection, LLC",83824,Demand,2026-06-19T15:16:40Z
-2026-06-16T12:00:00,PJM,"PJM Interconnection, LLC",87063,Demand,2026-06-19T15:16:40Z
-2026-06-16T13:00:00,PJM,"PJM Interconnection, LLC",88135,Demand,2026-06-19T15:16:40Z
-2026-06-16T14:00:00,PJM,"PJM Interconnection, LLC",88633,Demand,2026-06-19T15:16:40Z
-2026-06-16T15:00:00,PJM,"PJM Interconnection, LLC",90357,Demand,2026-06-19T15:16:40Z
-2026-06-16T16:00:00,PJM,"PJM Interconnection, LLC",92122,Demand,2026-06-19T15:16:40Z
-2026-06-16T17:00:00,PJM,"PJM Interconnection, LLC",94337,Demand,2026-06-19T15:16:40Z
-2026-06-16T18:00:00,PJM,"PJM Interconnection, LLC",97099,Demand,2026-06-19T15:16:40Z
-2026-06-16T19:00:00,PJM,"PJM Interconnection, LLC",99600,Demand,2026-06-19T15:16:40Z
-2026-06-16T20:00:00,PJM,"PJM Interconnection, LLC",102221,Demand,2026-06-19T15:16:40Z
-2026-06-16T21:00:00,PJM,"PJM Interconnection, LLC",105280,Demand,2026-06-19T15:16:40Z
-2026-06-16T22:00:00,PJM,"PJM Interconnection, LLC",107466,Demand,2026-06-19T15:16:40Z
-2026-06-16T23:00:00,PJM,"PJM Interconnection, LLC",107759,Demand,2026-06-19T15:16:40Z
-2026-06-17T00:00:00,PJM,"PJM Interconnection, LLC",105813,Demand,2026-06-19T15:16:40Z
-2026-06-17T01:00:00,PJM,"PJM Interconnection, LLC",102552,Demand,2026-06-19T15:16:40Z
-2026-06-17T02:00:00,PJM,"PJM Interconnection, LLC",100208,Demand,2026-06-19T15:16:40Z
-2026-06-17T03:00:00,PJM,"PJM Interconnection, LLC",95206,Demand,2026-06-19T15:16:40Z
-2026-06-17T04:00:00,PJM,"PJM Interconnection, LLC",89913,Demand,2026-06-19T15:16:40Z
-2026-06-17T05:00:00,PJM,"PJM Interconnection, LLC",85575,Demand,2026-06-19T15:16:40Z
-2026-06-17T06:00:00,PJM,"PJM Interconnection, LLC",83240,Demand,2026-06-19T15:16:40Z
-2026-06-17T07:00:00,PJM,"PJM Interconnection, LLC",81799,Demand,2026-06-19T15:16:40Z
-2026-06-17T08:00:00,PJM,"PJM Interconnection, LLC",80538,Demand,2026-06-19T15:16:40Z
-2026-06-17T09:00:00,PJM,"PJM Interconnection, LLC",80931,Demand,2026-06-19T15:16:40Z
-2026-06-17T10:00:00,PJM,"PJM Interconnection, LLC",82500,Demand,2026-06-19T15:16:40Z
-2026-06-17T11:00:00,PJM,"PJM Interconnection, LLC",85368,Demand,2026-06-19T15:16:40Z
-2026-06-17T12:00:00,PJM,"PJM Interconnection, LLC",89321,Demand,2026-06-19T15:16:40Z
-2026-06-17T13:00:00,PJM,"PJM Interconnection, LLC",93103,Demand,2026-06-19T15:16:40Z
-2026-06-17T14:00:00,PJM,"PJM Interconnection, LLC",95078,Demand,2026-06-19T15:16:40Z
-2026-06-17T15:00:00,PJM,"PJM Interconnection, LLC",97578,Demand,2026-06-19T15:16:40Z
-2026-06-17T16:00:00,PJM,"PJM Interconnection, LLC",100716,Demand,2026-06-19T15:16:40Z
-2026-06-17T17:00:00,PJM,"PJM Interconnection, LLC",104438,Demand,2026-06-19T15:16:40Z
-2026-06-17T18:00:00,PJM,"PJM Interconnection, LLC",108603,Demand,2026-06-19T15:16:40Z
-2026-06-17T19:00:00,PJM,"PJM Interconnection, LLC",110702,Demand,2026-06-19T15:16:40Z
-2026-06-17T20:00:00,PJM,"PJM Interconnection, LLC",112563,Demand,2026-06-19T15:16:40Z
-2026-06-17T21:00:00,PJM,"PJM Interconnection, LLC",113799,Demand,2026-06-19T15:16:40Z
-2026-06-17T22:00:00,PJM,"PJM Interconnection, LLC",114801,Demand,2026-06-19T15:16:40Z
-2026-06-17T23:00:00,PJM,"PJM Interconnection, LLC",114559,Demand,2026-06-19T15:16:40Z
-2026-06-18T00:00:00,PJM,"PJM Interconnection, LLC",112283,Demand,2026-06-19T15:16:40Z
-2026-06-18T01:00:00,PJM,"PJM Interconnection, LLC",109928,Demand,2026-06-19T15:16:40Z
-2026-06-18T02:00:00,PJM,"PJM Interconnection, LLC",107772,Demand,2026-06-19T15:16:40Z
-2026-06-18T03:00:00,PJM,"PJM Interconnection, LLC",102693,Demand,2026-06-19T15:16:40Z
-2026-06-18T04:00:00,PJM,"PJM Interconnection, LLC",97422,Demand,2026-06-19T15:16:40Z
-2026-06-18T05:00:00,PJM,"PJM Interconnection, LLC",94106,Demand,2026-06-19T15:16:40Z
-2026-06-18T06:00:00,PJM,"PJM Interconnection, LLC",91967,Demand,2026-06-19T15:16:40Z
-2026-06-18T07:00:00,PJM,"PJM Interconnection, LLC",89767,Demand,2026-06-19T15:16:40Z
-2026-06-18T08:00:00,PJM,"PJM Interconnection, LLC",88330,Demand,2026-06-19T15:16:40Z
-2026-06-18T09:00:00,PJM,"PJM Interconnection, LLC",88838,Demand,2026-06-19T15:16:40Z
-2026-06-18T10:00:00,PJM,"PJM Interconnection, LLC",91357,Demand,2026-06-19T15:16:40Z
-2026-06-18T11:00:00,PJM,"PJM Interconnection, LLC",95009,Demand,2026-06-19T15:16:40Z
-2026-06-18T12:00:00,PJM,"PJM Interconnection, LLC",99773,Demand,2026-06-19T15:16:40Z
-2026-06-18T13:00:00,PJM,"PJM Interconnection, LLC",103485,Demand,2026-06-19T15:16:40Z
-2026-06-18T14:00:00,PJM,"PJM Interconnection, LLC",106018,Demand,2026-06-19T15:16:40Z
-2026-06-18T15:00:00,PJM,"PJM Interconnection, LLC",106555,Demand,2026-06-19T15:16:40Z
-2026-06-18T16:00:00,PJM,"PJM Interconnection, LLC",107631,Demand,2026-06-19T15:16:40Z
-2026-06-18T17:00:00,PJM,"PJM Interconnection, LLC",109928,Demand,2026-06-19T15:16:40Z
-2026-06-18T18:00:00,PJM,"PJM Interconnection, LLC",113348,Demand,2026-06-19T15:16:40Z
-2026-06-18T19:00:00,PJM,"PJM Interconnection, LLC",116658,Demand,2026-06-19T15:16:40Z
-2026-06-18T20:00:00,PJM,"PJM Interconnection, LLC",118768,Demand,2026-06-19T15:16:40Z
-2026-06-18T21:00:00,PJM,"PJM Interconnection, LLC",120181,Demand,2026-06-19T15:16:40Z
-2026-06-18T22:00:00,PJM,"PJM Interconnection, LLC",120795,Demand,2026-06-19T15:16:40Z
-2026-06-18T23:00:00,PJM,"PJM Interconnection, LLC",119773,Demand,2026-06-19T15:16:40Z
-2026-06-19T00:00:00,PJM,"PJM Interconnection, LLC",117461,Demand,2026-06-19T15:16:40Z
-2026-06-19T01:00:00,PJM,"PJM Interconnection, LLC",114162,Demand,2026-06-19T15:16:40Z
-2026-06-19T02:00:00,PJM,"PJM Interconnection, LLC",111137,Demand,2026-06-19T15:16:40Z
-2026-06-19T03:00:00,PJM,"PJM Interconnection, LLC",105646,Demand,2026-06-19T15:16:40Z
-2026-06-19T04:00:00,PJM,"PJM Interconnection, LLC",100379,Demand,2026-06-19T15:16:40Z
-2026-06-19T05:00:00,PJM,"PJM Interconnection, LLC",95593,Demand,2026-06-19T15:16:40Z
-2026-06-19T06:00:00,PJM,"PJM Interconnection, LLC",92080,Demand,2026-06-19T15:16:40Z
-2026-06-19T07:00:00,PJM,"PJM Interconnection, LLC",89277,Demand,2026-06-19T15:16:40Z
-2026-06-19T08:00:00,PJM,"PJM Interconnection, LLC",87089,Demand,2026-06-19T15:16:40Z
-2026-06-19T09:00:00,PJM,"PJM Interconnection, LLC",86226,Demand,2026-06-19T15:16:40Z
-2026-06-19T10:00:00,PJM,"PJM Interconnection, LLC",87417,Demand,2026-06-19T15:16:40Z
-2026-06-19T11:00:00,PJM,"PJM Interconnection, LLC",89012,Demand,2026-06-19T15:16:40Z
-2026-06-19T12:00:00,PJM,"PJM Interconnection, LLC",91359,Demand,2026-06-19T15:16:40Z
-2026-06-19T13:00:00,PJM,"PJM Interconnection, LLC",93955,Demand,2026-06-19T15:16:40Z
-2026-06-19T14:00:00,PJM,"PJM Interconnection, LLC",96294,Demand,2026-06-19T15:16:40Z
+timestamp_utc,respondent,respondent_name,company_name,ticker,value_mwh,type_name
+2026-06-19T18:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,9015,Demand
+2026-06-19T19:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,9550,Demand
+2026-06-19T20:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,9980,Demand
+2026-06-19T21:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,10291,Demand
+2026-06-19T22:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,10348,Demand
+2026-06-19T23:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,10268,Demand
+2026-06-20T00:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,10004,Demand
+2026-06-20T01:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,9431,Demand
+2026-06-20T02:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,8810,Demand
+2026-06-20T03:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,8150,Demand
+2026-06-20T04:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,7356,Demand
+2026-06-20T05:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,6673,Demand
+2026-06-20T06:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,6123,Demand
+2026-06-20T07:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,5721,Demand
+2026-06-20T08:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,5388,Demand
+2026-06-20T09:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,5212,Demand
+2026-06-20T10:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,5120,Demand
+2026-06-20T11:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,5070,Demand
+2026-06-20T12:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,5323,Demand
+2026-06-20T13:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,5766,Demand
+2026-06-20T14:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,6325,Demand
+2026-06-20T15:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,6987,Demand
+2026-06-20T16:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,7579,Demand
+2026-06-20T17:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,8123,Demand
+2026-06-20T18:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,8592,Demand
+2026-06-20T19:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,8940,Demand
+2026-06-20T20:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,9256,Demand
+2026-06-20T21:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,9533,Demand
+2026-06-20T22:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,9714,Demand
+2026-06-20T23:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,9654,Demand
+2026-06-21T00:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,9295,Demand
+2026-06-21T01:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,8719,Demand
+2026-06-21T02:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,8220,Demand
+2026-06-21T03:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,7538,Demand
+2026-06-21T04:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,6826,Demand
+2026-06-21T05:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,6194,Demand
+2026-06-21T06:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,5767,Demand
+2026-06-21T07:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,5393,Demand
+2026-06-21T08:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,5176,Demand
+2026-06-21T09:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,5002,Demand
+2026-06-21T10:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,4993,Demand
+2026-06-21T11:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,4969,Demand
+2026-06-21T12:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,5331,Demand
+2026-06-21T13:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,5875,Demand
+2026-06-21T14:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,6724,Demand
+2026-06-21T15:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,7534,Demand
+2026-06-21T16:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,8342,Demand
+2026-06-21T17:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,9060,Demand
+2026-06-21T18:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,9644,Demand
+2026-06-21T19:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,10125,Demand
+2026-06-21T20:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,10497,Demand
+2026-06-21T21:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,10829,Demand
+2026-06-21T22:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,10916,Demand
+2026-06-21T23:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,10829,Demand
+2026-06-22T00:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,10487,Demand
+2026-06-22T01:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,10013,Demand
+2026-06-22T02:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,9498,Demand
+2026-06-22T03:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,8754,Demand
+2026-06-22T04:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,7981,Demand
+2026-06-22T05:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,7302,Demand
+2026-06-22T06:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,6813,Demand
+2026-06-22T07:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,6461,Demand
+2026-06-22T08:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,6225,Demand
+2026-06-22T09:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,6167,Demand
+2026-06-22T10:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,6326,Demand
+2026-06-22T11:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,6606,Demand
+2026-06-22T12:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,7081,Demand
+2026-06-22T13:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,7623,Demand
+2026-06-22T14:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,8313,Demand
+2026-06-22T15:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,9171,Demand
+2026-06-22T16:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,10001,Demand
+2026-06-22T17:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,10739,Demand
+2026-06-22T18:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,11277,Demand
+2026-06-22T19:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,11668,Demand
+2026-06-22T20:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,11974,Demand
+2026-06-22T21:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,12194,Demand
+2026-06-22T22:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,12349,Demand
+2026-06-22T23:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,12228,Demand
+2026-06-23T00:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,11809,Demand
+2026-06-23T01:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,11371,Demand
+2026-06-23T02:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,10667,Demand
+2026-06-23T03:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,9749,Demand
+2026-06-23T04:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,8960,Demand
+2026-06-23T05:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,8225,Demand
+2026-06-23T06:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,7709,Demand
+2026-06-23T07:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,7253,Demand
+2026-06-23T08:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,6971,Demand
+2026-06-23T09:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,6902,Demand
+2026-06-23T10:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,7098,Demand
+2026-06-23T11:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,7302,Demand
+2026-06-23T12:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,7745,Demand
+2026-06-23T13:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,8297,Demand
+2026-06-23T14:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,9007,Demand
+2026-06-23T15:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,9632,Demand
+2026-06-23T16:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,10012,Demand
+2026-06-23T17:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,10163,Demand
+2026-06-23T18:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,10084,Demand
+2026-06-23T19:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,9948,Demand
+2026-06-23T20:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,10051,Demand
+2026-06-23T21:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,10231,Demand
+2026-06-23T22:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,10241,Demand
+2026-06-23T23:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,10099,Demand
+2026-06-24T00:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,9726,Demand
+2026-06-24T01:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,9228,Demand
+2026-06-24T02:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,8792,Demand
+2026-06-24T03:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,8042,Demand
+2026-06-24T04:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,7241,Demand
+2026-06-24T05:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,6537,Demand
+2026-06-24T06:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,6048,Demand
+2026-06-24T07:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,5692,Demand
+2026-06-24T08:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,5464,Demand
+2026-06-24T09:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,5431,Demand
+2026-06-24T10:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,5554,Demand
+2026-06-24T11:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,5803,Demand
+2026-06-24T12:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,6129,Demand
+2026-06-24T13:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,6491,Demand
+2026-06-24T14:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,6881,Demand
+2026-06-24T15:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,7342,Demand
+2026-06-24T16:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,7835,Demand
+2026-06-24T17:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,8373,Demand
+2026-06-24T18:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,8915,Demand
+2026-06-24T19:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,9285,Demand
+2026-06-24T20:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,9504,Demand
+2026-06-24T21:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,9743,Demand
+2026-06-24T22:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,9795,Demand
+2026-06-24T23:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,9735,Demand
+2026-06-25T00:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,9421,Demand
+2026-06-25T01:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,8962,Demand
+2026-06-25T02:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,8442,Demand
+2026-06-25T03:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,7665,Demand
+2026-06-25T04:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,6871,Demand
+2026-06-25T05:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,6212,Demand
+2026-06-25T06:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,5797,Demand
+2026-06-25T07:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,5476,Demand
+2026-06-25T08:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,5279,Demand
+2026-06-25T09:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,5248,Demand
+2026-06-25T10:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,5431,Demand
+2026-06-25T11:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,5704,Demand
+2026-06-25T12:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,6043,Demand
+2026-06-25T13:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,6509,Demand
+2026-06-25T14:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,7104,Demand
+2026-06-25T15:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,7767,Demand
+2026-06-25T16:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,8472,Demand
+2026-06-25T17:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,8996,Demand
+2026-06-25T18:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,9418,Demand
+2026-06-25T19:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,9791,Demand
+2026-06-25T20:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,10125,Demand
+2026-06-25T21:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,10445,Demand
+2026-06-25T22:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,10582,Demand
+2026-06-25T23:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,10575,Demand
+2026-06-26T00:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,10249,Demand
+2026-06-26T01:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,9764,Demand
+2026-06-26T02:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,9246,Demand
+2026-06-26T03:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,8467,Demand
+2026-06-26T04:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,7653,Demand
+2026-06-26T05:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,7101,Demand
+2026-06-26T06:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,6602,Demand
+2026-06-26T07:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,6212,Demand
+2026-06-26T08:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,6016,Demand
+2026-06-26T09:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,5959,Demand
+2026-06-26T10:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,6071,Demand
+2026-06-26T11:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,6283,Demand
+2026-06-26T12:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,6851,Demand
+2026-06-26T13:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,7457,Demand
+2026-06-26T14:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,8038,Demand
+2026-06-26T15:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,8738,Demand
+2026-06-26T16:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,9493,Demand
+2026-06-26T17:00:00,CPLE,Duke Energy Progress East,Duke Energy,DUK,10101,Demand
+2026-06-19T18:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,16679,Demand
+2026-06-19T19:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,17211,Demand
+2026-06-19T20:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,17514,Demand
+2026-06-19T21:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,17700,Demand
+2026-06-19T22:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,17752,Demand
+2026-06-19T23:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,17395,Demand
+2026-06-20T00:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,16613,Demand
+2026-06-20T01:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,15606,Demand
+2026-06-20T02:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,14766,Demand
+2026-06-20T03:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,13682,Demand
+2026-06-20T04:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,12444,Demand
+2026-06-20T05:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,11288,Demand
+2026-06-20T06:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,10458,Demand
+2026-06-20T07:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,9853,Demand
+2026-06-20T08:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,9435,Demand
+2026-06-20T09:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,9180,Demand
+2026-06-20T10:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,9115,Demand
+2026-06-20T11:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,9136,Demand
+2026-06-20T12:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,9523,Demand
+2026-06-20T13:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,10321,Demand
+2026-06-20T14:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,11233,Demand
+2026-06-20T15:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,12091,Demand
+2026-06-20T16:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,12783,Demand
+2026-06-20T17:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,13411,Demand
+2026-06-20T18:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,14070,Demand
+2026-06-20T19:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,14784,Demand
+2026-06-20T20:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,15404,Demand
+2026-06-20T21:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,15985,Demand
+2026-06-20T22:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,16159,Demand
+2026-06-20T23:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,15820,Demand
+2026-06-21T00:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,15138,Demand
+2026-06-21T01:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,14406,Demand
+2026-06-21T02:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,13838,Demand
+2026-06-21T03:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,12941,Demand
+2026-06-21T04:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,11876,Demand
+2026-06-21T05:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,10899,Demand
+2026-06-21T06:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,10182,Demand
+2026-06-21T07:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,9639,Demand
+2026-06-21T08:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,9285,Demand
+2026-06-21T09:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,9076,Demand
+2026-06-21T10:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,9011,Demand
+2026-06-21T11:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,9017,Demand
+2026-06-21T12:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,9493,Demand
+2026-06-21T13:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,10474,Demand
+2026-06-21T14:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,11606,Demand
+2026-06-21T15:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,12710,Demand
+2026-06-21T16:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,13862,Demand
+2026-06-21T17:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,14927,Demand
+2026-06-21T18:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,15913,Demand
+2026-06-21T19:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,16736,Demand
+2026-06-21T20:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,17270,Demand
+2026-06-21T21:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,17795,Demand
+2026-06-21T22:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,18045,Demand
+2026-06-21T23:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,17905,Demand
+2026-06-22T00:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,17359,Demand
+2026-06-22T01:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,16554,Demand
+2026-06-22T02:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,15773,Demand
+2026-06-22T03:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,14561,Demand
+2026-06-22T04:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,13331,Demand
+2026-06-22T05:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,12241,Demand
+2026-06-22T06:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,11464,Demand
+2026-06-22T07:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,10832,Demand
+2026-06-22T08:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,10514,Demand
+2026-06-22T09:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,10483,Demand
+2026-06-22T10:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,10830,Demand
+2026-06-22T11:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,11348,Demand
+2026-06-22T12:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,12270,Demand
+2026-06-22T13:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,13358,Demand
+2026-06-22T14:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,14644,Demand
+2026-06-22T15:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,16019,Demand
+2026-06-22T16:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,17353,Demand
+2026-06-22T17:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,18443,Demand
+2026-06-22T18:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,19407,Demand
+2026-06-22T19:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,19865,Demand
+2026-06-22T20:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,20344,Demand
+2026-06-22T21:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,20521,Demand
+2026-06-22T22:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,20429,Demand
+2026-06-22T23:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,19654,Demand
+2026-06-23T00:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,18328,Demand
+2026-06-23T01:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,17529,Demand
+2026-06-23T02:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,16681,Demand
+2026-06-23T03:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,15555,Demand
+2026-06-23T04:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,14288,Demand
+2026-06-23T05:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,13218,Demand
+2026-06-23T06:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,12358,Demand
+2026-06-23T07:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,11793,Demand
+2026-06-23T08:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,11488,Demand
+2026-06-23T09:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,11419,Demand
+2026-06-23T10:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,11735,Demand
+2026-06-23T11:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,12254,Demand
+2026-06-23T12:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,12898,Demand
+2026-06-23T13:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,13431,Demand
+2026-06-23T14:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,14100,Demand
+2026-06-23T15:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,14690,Demand
+2026-06-23T16:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,15380,Demand
+2026-06-23T17:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,16136,Demand
+2026-06-23T18:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,16890,Demand
+2026-06-23T19:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,17351,Demand
+2026-06-23T20:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,17626,Demand
+2026-06-23T21:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,17848,Demand
+2026-06-23T22:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,17821,Demand
+2026-06-23T23:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,17468,Demand
+2026-06-24T00:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,16634,Demand
+2026-06-24T01:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,15569,Demand
+2026-06-24T02:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,14777,Demand
+2026-06-24T03:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,13508,Demand
+2026-06-24T04:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,12148,Demand
+2026-06-24T05:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,11086,Demand
+2026-06-24T06:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,10393,Demand
+2026-06-24T07:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,9802,Demand
+2026-06-24T08:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,9505,Demand
+2026-06-24T09:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,9452,Demand
+2026-06-24T10:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,9752,Demand
+2026-06-24T11:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,10243,Demand
+2026-06-24T12:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,10942,Demand
+2026-06-24T13:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,11556,Demand
+2026-06-24T14:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,12181,Demand
+2026-06-24T15:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,12889,Demand
+2026-06-24T16:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,13570,Demand
+2026-06-24T17:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,14200,Demand
+2026-06-24T18:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,14821,Demand
+2026-06-24T19:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,15373,Demand
+2026-06-24T20:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,15809,Demand
+2026-06-24T21:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,16159,Demand
+2026-06-24T22:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,16453,Demand
+2026-06-24T23:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,16383,Demand
+2026-06-25T00:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,15763,Demand
+2026-06-25T01:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,14860,Demand
+2026-06-25T02:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,14145,Demand
+2026-06-25T03:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,12977,Demand
+2026-06-25T04:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,11747,Demand
+2026-06-25T05:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,10754,Demand
+2026-06-25T06:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,10062,Demand
+2026-06-25T07:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,9638,Demand
+2026-06-25T08:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,9352,Demand
+2026-06-25T09:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,9361,Demand
+2026-06-25T10:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,9699,Demand
+2026-06-25T11:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,10238,Demand
+2026-06-25T12:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,10894,Demand
+2026-06-25T13:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,11538,Demand
+2026-06-25T14:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,12191,Demand
+2026-06-25T15:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,13065,Demand
+2026-06-25T16:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,13869,Demand
+2026-06-25T17:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,14764,Demand
+2026-06-25T18:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,15684,Demand
+2026-06-25T19:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,16524,Demand
+2026-06-25T20:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,17256,Demand
+2026-06-25T21:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,17821,Demand
+2026-06-25T22:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,18020,Demand
+2026-06-25T23:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,17708,Demand
+2026-06-26T00:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,17087,Demand
+2026-06-26T01:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,16211,Demand
+2026-06-26T02:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,15636,Demand
+2026-06-26T03:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,14209,Demand
+2026-06-26T04:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,12916,Demand
+2026-06-26T05:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,11825,Demand
+2026-06-26T06:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,11002,Demand
+2026-06-26T07:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,10461,Demand
+2026-06-26T08:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,10106,Demand
+2026-06-26T09:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,10022,Demand
+2026-06-26T10:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,10345,Demand
+2026-06-26T11:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,10732,Demand
+2026-06-26T12:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,11413,Demand
+2026-06-26T13:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,12118,Demand
+2026-06-26T14:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,12756,Demand
+2026-06-26T15:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,13488,Demand
+2026-06-26T16:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,14154,Demand
+2026-06-26T17:00:00,DUK,Duke Energy Carolinas,Duke Energy,DUK,14822,Demand
+2026-06-19T18:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,104453,Demand
+2026-06-19T19:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,106615,Demand
+2026-06-19T20:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,108901,Demand
+2026-06-19T21:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,111177,Demand
+2026-06-19T22:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,112914,Demand
+2026-06-19T23:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,113042,Demand
+2026-06-20T00:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,110557,Demand
+2026-06-20T01:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,105955,Demand
+2026-06-20T02:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,102290,Demand
+2026-06-20T03:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,96881,Demand
+2026-06-20T04:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,91428,Demand
+2026-06-20T05:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,86588,Demand
+2026-06-20T06:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,82729,Demand
+2026-06-20T07:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,80541,Demand
+2026-06-20T08:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,79211,Demand
+2026-06-20T09:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,78391,Demand
+2026-06-20T10:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,78123,Demand
+2026-06-20T11:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,78072,Demand
+2026-06-20T12:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,79969,Demand
+2026-06-20T13:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,82855,Demand
+2026-06-20T14:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,86045,Demand
+2026-06-20T15:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,87366,Demand
+2026-06-20T16:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,90183,Demand
+2026-06-20T17:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,93330,Demand
+2026-06-20T18:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,96288,Demand
+2026-06-20T19:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,99410,Demand
+2026-06-20T20:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,103030,Demand
+2026-06-20T21:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,106445,Demand
+2026-06-20T22:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,108721,Demand
+2026-06-20T23:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,108897,Demand
+2026-06-21T00:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,107096,Demand
+2026-06-21T01:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,103517,Demand
+2026-06-21T02:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,100417,Demand
+2026-06-21T03:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,95606,Demand
+2026-06-21T04:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,90218,Demand
+2026-06-21T05:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,85923,Demand
+2026-06-21T06:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,82704,Demand
+2026-06-21T07:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,80331,Demand
+2026-06-21T08:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,78842,Demand
+2026-06-21T09:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,77945,Demand
+2026-06-21T10:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,77549,Demand
+2026-06-21T11:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,77031,Demand
+2026-06-21T12:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,78641,Demand
+2026-06-21T13:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,81451,Demand
+2026-06-21T14:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,85550,Demand
+2026-06-21T15:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,89385,Demand
+2026-06-21T16:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,92523,Demand
+2026-06-21T17:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,96196,Demand
+2026-06-21T18:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,99683,Demand
+2026-06-21T19:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,102535,Demand
+2026-06-21T20:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,105292,Demand
+2026-06-21T21:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,107889,Demand
+2026-06-21T22:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,109720,Demand
+2026-06-21T23:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,109613,Demand
+2026-06-22T00:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,108215,Demand
+2026-06-22T01:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,105119,Demand
+2026-06-22T02:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,102807,Demand
+2026-06-22T03:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,97784,Demand
+2026-06-22T04:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,92369,Demand
+2026-06-22T05:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,88929,Demand
+2026-06-22T06:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,85820,Demand
+2026-06-22T07:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,83535,Demand
+2026-06-22T08:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,82434,Demand
+2026-06-22T09:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,82909,Demand
+2026-06-22T10:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,85421,Demand
+2026-06-22T11:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,88785,Demand
+2026-06-22T12:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,93449,Demand
+2026-06-22T13:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,97434,Demand
+2026-06-22T14:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,100395,Demand
+2026-06-22T15:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,103723,Demand
+2026-06-22T16:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,107713,Demand
+2026-06-22T17:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,111770,Demand
+2026-06-22T18:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,114849,Demand
+2026-06-22T19:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,116508,Demand
+2026-06-22T20:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,117601,Demand
+2026-06-22T21:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,118139,Demand
+2026-06-22T22:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,117942,Demand
+2026-06-22T23:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,115533,Demand
+2026-06-23T00:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,112425,Demand
+2026-06-23T01:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,109543,Demand
+2026-06-23T02:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,106666,Demand
+2026-06-23T03:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,101253,Demand
+2026-06-23T04:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,95997,Demand
+2026-06-23T05:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,91939,Demand
+2026-06-23T06:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,89138,Demand
+2026-06-23T07:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,86588,Demand
+2026-06-23T08:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,85061,Demand
+2026-06-23T09:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,85381,Demand
+2026-06-23T10:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,87307,Demand
+2026-06-23T11:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,90637,Demand
+2026-06-23T12:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,94731,Demand
+2026-06-23T13:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,97401,Demand
+2026-06-23T14:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,99408,Demand
+2026-06-23T15:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,101484,Demand
+2026-06-23T16:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,101996,Demand
+2026-06-23T17:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,102881,Demand
+2026-06-23T18:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,104415,Demand
+2026-06-23T19:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,104456,Demand
+2026-06-23T20:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,104630,Demand
+2026-06-23T21:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,105245,Demand
+2026-06-23T22:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,106404,Demand
+2026-06-23T23:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,106802,Demand
+2026-06-24T00:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,106224,Demand
+2026-06-24T01:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,103773,Demand
+2026-06-24T02:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,101189,Demand
+2026-06-24T03:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,96332,Demand
+2026-06-24T04:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,90911,Demand
+2026-06-24T05:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,86538,Demand
+2026-06-24T06:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,83131,Demand
+2026-06-24T07:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,80427,Demand
+2026-06-24T08:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,78869,Demand
+2026-06-24T09:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,78915,Demand
+2026-06-24T10:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,80812,Demand
+2026-06-24T11:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,83792,Demand
+2026-06-24T12:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,86592,Demand
+2026-06-24T13:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,89587,Demand
+2026-06-24T14:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,92279,Demand
+2026-06-24T15:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,94951,Demand
+2026-06-24T16:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,98027,Demand
+2026-06-24T17:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,100533,Demand
+2026-06-24T18:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,103169,Demand
+2026-06-24T19:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,105705,Demand
+2026-06-24T20:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,109338,Demand
+2026-06-24T21:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,112721,Demand
+2026-06-24T22:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,115493,Demand
+2026-06-24T23:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,115948,Demand
+2026-06-25T00:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,114210,Demand
+2026-06-25T01:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,109842,Demand
+2026-06-25T02:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,106189,Demand
+2026-06-25T03:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,99935,Demand
+2026-06-25T04:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,93140,Demand
+2026-06-25T05:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,88854,Demand
+2026-06-25T06:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,85888,Demand
+2026-06-25T07:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,83049,Demand
+2026-06-25T08:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,81397,Demand
+2026-06-25T09:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,81402,Demand
+2026-06-25T10:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,83245,Demand
+2026-06-25T11:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,86512,Demand
+2026-06-25T12:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,90867,Demand
+2026-06-25T13:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,94116,Demand
+2026-06-25T14:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,96147,Demand
+2026-06-25T15:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,99036,Demand
+2026-06-25T16:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,102829,Demand
+2026-06-25T17:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,106879,Demand
+2026-06-25T18:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,111635,Demand
+2026-06-25T19:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,115006,Demand
+2026-06-25T20:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,117668,Demand
+2026-06-25T21:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,120394,Demand
+2026-06-25T22:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,121815,Demand
+2026-06-25T23:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,121248,Demand
+2026-06-26T00:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,118572,Demand
+2026-06-26T01:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,114802,Demand
+2026-06-26T02:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,111530,Demand
+2026-06-26T03:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,105516,Demand
+2026-06-26T04:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,99953,Demand
+2026-06-26T05:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,95641,Demand
+2026-06-26T06:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,92657,Demand
+2026-06-26T07:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,90177,Demand
+2026-06-26T08:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,87914,Demand
+2026-06-26T09:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,87405,Demand
+2026-06-26T10:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,88922,Demand
+2026-06-26T11:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,91623,Demand
+2026-06-26T12:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,95823,Demand
+2026-06-26T13:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,99633,Demand
+2026-06-26T14:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,102973,Demand
+2026-06-26T15:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,105819,Demand
+2026-06-26T16:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,107621,Demand
+2026-06-26T17:00:00,PJM,"PJM Interconnection, LLC",PJM Interconnection (non-traded ISO),,110741,Demand

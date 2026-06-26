@@ -52,12 +52,24 @@ class EiaDemandExtractor(BaseHttpExtractor):
         end_dt = datetime.now(tz=timezone.utc)
         start_dt = end_dt - timedelta(days=self._lookback_days)
 
+        # Pull demand for PJM aggregate + key utility-level BAs with traded parents
+        respondents = [
+            "PJM",   # PJM Interconnection aggregate
+            "DOM",   # Dominion Energy Virginia (D)
+            "AEP",   # American Electric Power (AEP)
+            "FE",    # FirstEnergy (FE)
+            "DUK",   # Duke Energy (DUK)
+            "CPLE",  # Duke Energy Progress East (DUK)
+            "EXC",   # Exelon (EXC) — feeds ComEd/PECO/BGE
+            "PPL",   # PPL Corporation (PPL)
+            "PSEG",  # PSEG (PEG)
+        ]
+
         params: dict[str, Any] = {
             "api_key": self._settings.eia_api_key,
             "frequency": "hourly",
             "data[0]": "value",
-            "facets[respondent][]": "PJM",
-            "facets[type][]": "D",            # Demand
+            "facets[type][]": "D",            # Demand only
             "start": start_dt.strftime("%Y-%m-%dT%H"),
             "end": end_dt.strftime("%Y-%m-%dT%H"),
             "sort[0][column]": "period",
@@ -65,6 +77,9 @@ class EiaDemandExtractor(BaseHttpExtractor):
             "offset": 0,
             "length": 5000,
         }
+        # Add each respondent as a separate facet parameter
+        for i, code in enumerate(respondents):
+            params[f"facets[respondent][{i}]"] = code
 
-        log.info("eia_demand.fetch", start=params["start"], end=params["end"])
+        log.info("eia_demand.fetch", start=params["start"], end=params["end"], respondents=respondents)
         return self._get_json(_BASE_URL, params=params)

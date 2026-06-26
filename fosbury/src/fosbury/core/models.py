@@ -111,10 +111,12 @@ class DemandRecord(BaseModel):
     """Hourly electricity demand from the EIA API."""
 
     timestamp_utc: datetime
-    respondent: str        # EIA balancing-authority code, e.g. "PJM"
+    respondent: str        # EIA balancing-authority code, e.g. "DOM"
     respondent_name: str
     value_mwh: Decimal
     type_name: str         # e.g. "Demand", "Net generation"
+    ticker: str = ""       # NYSE/NASDAQ ticker of the BA owner; "" if non-traded
+    company_name: str = "" # Full name of the publicly traded parent company
 
     @field_validator("timestamp_utc", mode="before")
     @classmethod

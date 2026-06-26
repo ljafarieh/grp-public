@@ -17,6 +17,7 @@ import structlog
 
 from fosbury.core.exceptions import TransformationError
 from fosbury.core.models import DemandDataset, DemandRecord
+from fosbury.pipelines.ba_registry import lookup_ba
 from fosbury.transformers.base import BaseTransformer
 
 log = structlog.get_logger()
@@ -64,12 +65,16 @@ class EiaDemandTransformer(BaseTransformer):
                 continue
 
             try:
+                respondent = str(self._require(row, "respondent", i))
+                ba_info = lookup_ba(respondent)
                 record = DemandRecord(
                     timestamp_utc=self._require(row, "period", i),
-                    respondent=str(self._require(row, "respondent", i)),
+                    respondent=respondent,
                     respondent_name=str(row.get("respondent-name", "")),
                     value_mwh=value,
                     type_name=str(row.get("type-name", "")),
+                    ticker=ba_info.ticker,
+                    company_name=ba_info.company_name,
                 )
             except (TransformationError, ValueError, TypeError) as exc:
                 self._warn_skip(i, str(exc))

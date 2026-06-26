@@ -109,6 +109,8 @@ class ParquetLoader:
                     "respondent_name": r.respondent_name,
                     "value_mwh": float(r.value_mwh),
                     "type_name": r.type_name,
+                    "ticker": r.ticker,
+                    "company_name": r.company_name,
                 }
                 for r in dataset.records
             ]

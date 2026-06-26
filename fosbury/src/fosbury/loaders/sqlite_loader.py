@@ -66,6 +66,8 @@ _DDL: dict[str, str] = {
             respondent_name TEXT,
             value_mwh       TEXT NOT NULL,
             type_name       TEXT,
+            ticker          TEXT,
+            company_name    TEXT,
             loaded_at       TEXT NOT NULL DEFAULT (strftime('%Y-%m-%dT%H:%M:%SZ','now')),
             PRIMARY KEY (timestamp_utc, respondent)
         )
@@ -118,6 +120,13 @@ class SqliteLoader:
     def _ensure_tables(self, conn: sqlite3.Connection, *table_names: str) -> None:
         for name in table_names:
             conn.execute(_DDL[name])
+        # Add columns introduced after initial schema creation (idempotent)
+        if "demand" in table_names:
+            for col, typedef in [("ticker", "TEXT"), ("company_name", "TEXT")]:
+                try:
+                    conn.execute(f"ALTER TABLE demand ADD COLUMN {col} {typedef}")
+                except sqlite3.OperationalError:
+                    pass  # column already exists
 
     @io_retry(max_attempts=3, wait_seconds=0.5)
     def _load_lmp(self, dataset: LmpDataset) -> int:
@@ -173,13 +182,16 @@ class SqliteLoader:
                 r.respondent_name,
                 str(r.value_mwh),
                 r.type_name,
+                r.ticker,
+                r.company_name,
             )
             for r in dataset.records
         ]
         sql = """
             INSERT OR REPLACE INTO demand
-                (timestamp_utc, respondent, respondent_name, value_mwh, type_name)
-            VALUES (?,?,?,?,?)
+                (timestamp_utc, respondent, respondent_name, value_mwh, type_name,
+                 ticker, company_name)
+            VALUES (?,?,?,?,?,?,?)
         """
         return self._bulk_write("demand", rows, sql)
 

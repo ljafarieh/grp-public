@@ -1,0 +1,35 @@
+event_id,iso_region,state_jurisdiction,entity_target,data_type,raw_text_blob,metric_delta,keywords_matched,source_url,scraped_at,alert_sent,loaded_at
+90e9a8734ad775b7f6fc15ff,PJM,VA,Dominion Energy,REGULATORY_PROTEST,"260710256
+COMMONWEALTH OF VIRGINIA
+STATE CORPORATION COMMISSION
+AT RICHMOND, JULY 10, 2026
+State Corporation Commission
+Document Control Center
+07/10/2026-3:56 PM
+COMMONWEALTH OF VIRGINIA, ex rel.
+STATE CORPORATION COMMISSION
+v. CASE NO. URS-2024-00136
+ISAAC JOSE CAMACHO VARGAS, INDIVIDUALLY,
+AND D/B/A ATLAS REMODELING GROUP LLC,
+Defendant
+AMENDED RULE TO SHOW CAUSE
+Pursuant to § 56-265.30 of the Code of Virginia (“Code”), the State Corporation
+Commission (“Commission”) is charged with enforcing the provisions of the Underground
+Utility Damage Prevention Act (“Act”), Chapter 10.3 (§ 56-265.14 etseq.) of Title 56 of the
+Code. The Commission’s Division of Utility and Railroad Safety (“Division”), after having
+conducted an investigation of this matter, alleges that:.1
+(1) On or about August 11, 2023, Defendant damaged a 1-inch plastic gas service line
+operated by Washington Gas Light Company, located at or near 9527 Locust Hill Drive, Fairfax
+(City), Virginia, while excavating.
+(2) On the occasion set out in paragraph (1) above, the Defendant failed to submit a
+locate request to the notification center, in violation of Code § 56-265.17 A.
+1 On December 4, 2025, the Commission issued a Rule to Show Cause (“Rule”) against Isaac Jose Camacho
+Vargas, Individually, and d/b/a Atlas Remodeling Group LLC (“Defendant”) for an alleged violation of Code
+§ 56-265.17 A. The Rule set the matter for hearing on March 24, 2026, before a Hearing Examiner, and directed the
+Defendant to file a resp",0,"show cause,objection",https://www.scc.virginia.gov/docketsearch/docs/8dd701!.PDF,2026-07-12T17:12:32.200370+00:00,0,2026-07-12T17:12:32Z
+va_scc_stub_001,PJM,VA,Dominion Energy,EQUIPMENT_DELAY,"Dominion Energy Virginia has filed for a 180-day extension on the Loudoun County 500kV substation upgrade due to transformer procurement delays. Equipment backlog from the primary vendor has pushed the expected energization date from Q3 2025 to Q1 2026. The substation serves the primary interconnection point for three large-load data center facilities in Ashburn, VA currently awaiting commercial operation.",180,"transformer procurement,substation hold,energization delay",https://scc.virginia.gov/docketing/case/PUE-2024-00123/filing001.pdf,2026-06-19T15:00:00,0,2026-06-19T15:53:32Z
+va_scc_stub_002,PJM,VA,Dominion Energy,REGULATORY_PROTEST,The Office of the Attorney General of Virginia has submitted a formal protest to the State Corporation Commission regarding Dominion Energy's proposed large-load tariff amendments. The protest alleges that the proposed rate structure improperly shifts right-of-way acquisition delay costs from hyperscale data center operators onto residential ratepayers across the Dominion service territory.,0,"protest,right-of-way acquisition delay,ratepayer,cost-shifting",https://scc.virginia.gov/docketing/case/PUE-2024-00189/protest001.pdf,2026-06-19T15:00:00,0,2026-06-19T15:53:32Z
+ohio_puco_stub_001,PJM,OH,American Electric Power,QUEUE_MILESTONE,"American Electric Power filed a system impact study update indicating that the Columbus data center interconnection cluster has withdrawn 24,300 MW of uncommitted capacity requests following implementation of the take-or-pay tariff. Expected commercial operation dates have been extended by an average of 14 months across the affected queue positions. AEP projects that confirmed contracted load has declined from 30,000 MW to 5,700 MW of bankable demand.",420,"commercial operation date,queue withdrawal,cost allocation",https://dis.puc.state.oh.us/CaseRecord/case/EL-2024-00456/attachment_SIS.pdf,2026-06-19T15:00:00,0,2026-06-19T15:53:32Z
+pa_puc_stub_001,PJM,PA,Constellation Energy,REGULATORY_PROTEST,The Pennsylvania Public Utility Commission received a formal protest from the Office of Consumer Advocate challenging Constellation Energy's proposed behind-the-meter co-location agreement with a hyperscale data center operator at the Susquehanna nuclear facility. The protest alleges that the arrangement shifts approximately $340M in annual grid maintenance costs to residential ratepayers and requests a formal restudy of the cost-shifting methodology before any tariff approval.,0,"protest,co-location,behind-the-meter,cost-shifting,ratepayer,restudy",https://www.dms.puc.pa.gov/dms_public/case/CEG-2024-00789/OCA_protest.pdf,2026-06-19T15:00:00,0,2026-06-19T15:53:32Z
+ferc_stub_001,PJM,FEDERAL,Talen Energy,REGULATORY_PROTEST,FERC issued a Show Cause order under FPA Section 206 regarding Talen Energy's Cumulus Data co-location arrangement at Susquehanna Steam Electric Station. The Commission identified concerns about net injection configurations and directed Talen to demonstrate compliance within 90 days or face a formal contract restudy. An intervening party representing industrial ratepayers has further alleged that the behind-the-meter arrangement improperly circumvents PJM's interconnection queue process.,90,"show cause,co-location,restudy,net injection,behind-the-meter,protest",https://elibrary.ferc.gov/eLibrary/filelist?accession=20240615-5000,2026-06-19T15:00:00,0,2026-06-19T15:53:32Z
+ferc_stub_002,PJM,FEDERAL,Constellation Energy,REGULATORY_PROTEST,FERC received a Section 206 complaint from the PJM Independent Market Monitor alleging that Constellation Energy's proposed nuclear co-location tariff unfairly shifts transmission cost allocation obligations from the co-located data center operator to other PJM market participants. The IMM requests a formal evidentiary hearing and interim injunctive relief pending resolution.,0,"protest,co-location,cost allocation,intervention,independent market monitor",https://elibrary.ferc.gov/eLibrary/filelist?accession=20240701-3210,2026-06-19T15:00:00,0,2026-06-19T15:53:32Z

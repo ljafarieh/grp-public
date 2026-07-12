@@ -9,6 +9,7 @@ structlog>=24.1
 python-dotenv>=1.0
 rich>=13.7
 beautifulsoup4>=4.12
+playwright>=1.44
 
 # Dev / test
 pytest>=8.2

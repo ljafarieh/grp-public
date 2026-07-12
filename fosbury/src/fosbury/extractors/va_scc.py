@@ -143,13 +143,28 @@ class VirginiaSCCScraper(BaseHttpExtractor):
     def _fetch_documents(self, matter_no: int) -> list[dict[str, Any]]:
         resp = self._client.get(
             _DOCS_URL,
-            params={"MATTER_NO": matter_no},
+            params={
+                "$filter": f"MATTER_NO eq {matter_no}",
+                "$select": "Document_Name,Date_Filed,DocID,FileName",
+            },
             headers=_HEADERS,
             timeout=15,
         )
         resp.raise_for_status()
         data = resp.json()
-        return data if isinstance(data, list) else []
+        # Breeze partial-entity responses use Document_Name key; remap to
+        # match the full-entity field names used elsewhere in this extractor.
+        result = []
+        for doc in (data if isinstance(data, list) else []):
+            if "$ref" in doc:
+                continue
+            result.append({
+                "DocID": doc.get("DocID"),
+                "FileName": doc.get("FileName", ""),
+                "DocumentDescription": doc.get("Document_Name", ""),
+                "FileDate": doc.get("Date_Filed", ""),
+            })
+        return sorted(result, key=lambda d: d.get("FileDate", ""), reverse=True)
 
 
 def _classify(keywords: list[str]) -> str:

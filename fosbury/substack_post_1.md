@@ -20,7 +20,11 @@ So I built something to read them automatically.
 
 It's called the Grid Realization Pipeline, or GRP. It hits regulatory APIs on a schedule, extracts PDFs, scans for keywords, runs anomaly detection on actual electricity demand data from the EIA (the U.S. Energy Information Administration), and flags anything that looks meaningful. The whole thing runs in Python, stores events in SQLite, and sends alerts when something hits.
 
-I'm not a hedge fund. I'm a student who thought physical grid data was underanalyzed and wanted to see what was actually in there.
+I'm not a hedge fund. I'm a student who taught himself Python building this, using Claude as a coding partner to understand what I was writing and debug what wasn't working. No formal CS background. Just a thesis and enough stubbornness to figure it out.
+
+The thesis: physical grid data is public, granular, and almost completely unread by people who trade utility stocks. Utility companies are required to disclose changes to their interconnection queues, demand forecasts, and infrastructure plans through state and federal regulatory filings. Those filings describe the real state of the grid in detail. They also tend to show up weeks or months before the same information makes it into an earnings call.
+
+If you could read those filings automatically and at scale, you'd have a structural information advantage that has nothing to do with inside information -- it's all sitting in government portals, totally public, just buried.
 
 ---
 
@@ -100,7 +104,7 @@ That gap is the edge.
 
 I'm not open-sourcing the full pipeline, but I posted four standalone scripts on GitHub that show exactly how each layer works. You can run all of them with `pip install httpx pandas pdfplumber` and a free EIA API key.
 
-**[github.com/yourusername/grp-public](https://github.com/yourusername/grp-public)**
+**[github.com/ljafarieh/grp-public](https://github.com/ljafarieh/grp-public)**
 
 Here's how the four pieces fit together:
 

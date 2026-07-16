@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Physics of the Grid vs. The AI Bubble</title>
+<style>
+  body {
+    font-family: Georgia, serif;
+    font-size: 18px;
+    line-height: 1.75;
+    color: #111;
+    max-width: 700px;
+    margin: 60px auto;
+    padding: 0 24px;
+    background: #fff;
+  }
+  h1 { font-size: 2em; line-height: 1.2; margin: 0.8em 0 0.2em; }
+  h2 { font-size: 1.35em; margin: 1.8em 0 0.4em; border-bottom: 1px solid #eee; padding-bottom: 6px; }
+  h3 { font-size: 1.1em; margin: 1.4em 0 0.3em; }
+  p  { margin: 0 0 1em; }
+  hr { border: none; border-top: 1px solid #ddd; margin: 2em 0; }
+  blockquote {
+    margin: 1.5em 0;
+    padding: 16px 24px;
+    background: #f7f7f5;
+    border-left: 4px solid #ccc;
+    font-style: italic;
+    color: #333;
+    font-size: 0.95em;
+  }
+  blockquote p { margin: 0 0 0.5em; }
+  blockquote p:last-child { margin: 0; }
+  pre {
+    background: #f4f4f2;
+    border-radius: 6px;
+    padding: 18px 20px;
+    overflow-x: auto;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 1.2em 0;
+  }
+  code { font-family: 'Courier New', monospace; font-size: 0.85em; background: #f0f0ee; padding: 1px 4px; border-radius: 3px; }
+  pre code { background: none; padding: 0; font-size: 13px; }
+  ul, ol { padding-left: 24px; }
+  li { margin-bottom: 0.6em; }
+  a { color: #1a5276; }
+  strong { font-weight: 700; }
+  em { font-style: italic; }
+  .subheading { font-size: 1.1em; color: #444; margin: 0 0 1.5em; font-style: italic; }
+  .note { font-size: 0.85em; color: #888; font-style: italic; }
+</style>
+</head>
+<body>
+
+<h1>The Physics of the Grid vs. The AI Bubble</h1>
+<p class="subheading">How high jump training inspired a Python data engine that exposes a massive disconnect between Wall Street hype and the physical reality of the electrical grid.</p>
+
+<hr>
+
+<p>Athletics and data engineering seem to have absolutely nothing in common.</p>
+
+<p>But a few months ago, when I started looking into where the AI boom is actually going to get its electricity, I realized both fields are governed by the exact same rule:</p>
+
+<p><strong>Success is about finding the leverage point that everyone else is ignoring.</strong></p>
+
+<p>Before 1968, every high jumper ran straight at the bar and went over face-first using the "straddle" technique.</p>
+
+<p>Then came Dick Fosbury. He realized that if he ran in a curve, took off from his outside foot, and flipped over the bar backward, he could manipulate his center of mass so that it actually passed underneath the bar while his body cleared it.</p>
+
+<p>Coaches called it awkward. Doctors warned it was dangerous. But he won Olympic Gold, shattered the world record, and changed the physics of the sport forever.</p>
+
+<p class="note">[insert photo of Dick Fosbury]</p>
+
+<p>Right now, Wall Street is approaching the AI infrastructure boom completely face-first.</p>
+
+<p>Every mid-cap tech player, legacy Bitcoin miner, and industrial real estate trust has seen its stock skyrocket. All they have to do is slap a slide in their investor deck showing "gigawatts of planned capacity" in regional utility queues. The market has eagerly rewarded these "paper pipelines" under the assumption that if you have a plot of land and a dream, the power will flow.</p>
+
+<p>But just like high jumping, the physics of the grid doesn't care about hype.</p>
+
+<p>I wanted to find out if these market expectations were physically possible. So, I spent my summer teaching myself Python and Anthropic's Claude Code to build Project Fosbury — a data engine designed to catch the exact moment Wall Street's hype collides with physical reality.</p>
+
+<hr>
+
+<h2>The "Ghost Demand" Problem</h2>
+
+<p>Historically, if you wanted to build a data center, you could apply to connect to the grid for a massive allocation (say, 100 megawatts) and slowly ramp up your usage over a decade. Crucially, you only paid the utility for the power you actually drew. It was essentially a free, zero-risk option on future growth.</p>
+
+<p>This loophole triggered an absolute gold rush. Developers flooded utility queues with speculative requests, creating a mountain of "ghost demand." Utilities were forced to map out billions of dollars in transmission line upgrades to support capacity that might never actually be used.</p>
+
+<p>But public utility commissions have a legal mandate to protect ordinary residential homeowners from footing the bill for "stranded assets" if these tech projects fail. To fix this, regulators are quietly rolling out a highly restrictive, un-fakeable economic mechanism: The Take-or-Pay Tariff.</p>
+
+<p>My data engine mapped three major shifts in the PJM footprint that are about to rewrite the economics of the entire sector:</p>
+
+<h3>1. Virginia (Dominion Energy's GS-5)</h3>
+
+<p>In Northern Virginia — the data center capital of the world — the State Corporation Commission officially approved Dominion's new GS-5 rate class, going into effect on January 1, 2027. <span class="note">(Based on regulatory filings monitored by Project Fosbury — specific contract terms subject to final tariff language.)</span></p>
+
+<ul>
+  <li><strong>The Rule:</strong> Any large electrical load over 25 MW must sign a binding 14-year contract backed by heavy upfront collateral.</li>
+  <li><strong>The Catch:</strong> They must pay a monthly minimum of 85% of their contracted capacity — even if their data center sits completely empty.</li>
+</ul>
+
+<h3>2. Pennsylvania (The PUC Model Tariff)</h3>
+
+<p>In May 2026, the Pennsylvania Public Utility Commission finalized its Model Large Load Tariff, which local utilities like PPL are actively adopting. <span class="note">(Based on PA PUC docket filings monitored by Project Fosbury.)</span></p>
+
+<ul>
+  <li><strong>The Rule:</strong> It institutes an 80% take-or-pay floor and a minimum contract term of at least five years.</li>
+  <li><strong>The Catch:</strong> It implements a strict "but-for" cost-causation standard. If a local substation upgrade is required but for the data center connecting, the developer must pay 100% of those multi-million-dollar infrastructure costs upfront.</li>
+</ul>
+
+<h3>3. Ohio (AEP's Take-or-Pay Tariff)</h3>
+
+<p>AEP Ohio pioneered this trend, establishing an 85% take-or-pay threshold and forcing non-investment-grade developers to put up massive credit guarantees.</p>
+
+<hr>
+
+<h2>What Happens When Speculators Hold the Bag?</h2>
+
+<p>When state utility commissions force developers to back up their speculative power requests with hard, unrecoverable capital and 14-year liabilities, the "paper pipelines" evaporate.</p>
+
+<p>In Ohio, when forced to face AEP's strict collateral requirements, massive chunks of speculative capacity are quietly being withdrawn. Here is the language directly from AEP's formal filing:</p>
+
+<blockquote>
+  <p>"The Columbus data center interconnection cluster has withdrawn 24,300 MW of uncommitted capacity requests following implementation of the take-or-pay tariff. Expected commercial operation dates have been extended by an average of 14 months across the affected queue positions. AEP projects that confirmed contracted load has declined from 30,000 MW to 5,700 MW of bankable demand."</p>
+  <p>— American Electric Power, Ohio PUC System Impact Study Update</p>
+</blockquote>
+
+<p>In Virginia, the pending 2027 launch of Dominion's GS-5 tariff is forcing a rapid, silent sorting mechanism across the entire state. If a developer does not have a trillion-dollar balance sheet or a signed lease with a Tier-1 hyperscaler (like Microsoft, AWS, or Google) who can guarantee immediate, high-volume power usage, they simply cannot afford to stay in the queue.</p>
+
+<hr>
+
+<h2>The Investment Playbook: Winners vs. Value Traps</h2>
+
+<p>From a trading perspective, this data draws a real line between who's actually building and who's faking it.</p>
+
+<h3>The Value Traps (What I'm Avoiding)</h3>
+
+<ul>
+  <li><strong>The Speculative "AI Pivoters":</strong> Legacy Bitcoin miners that have re-rated their valuations on the promise of "converting power footprints to AI data centers" are in severe danger. If they lack the balance sheets to put up millions in upfront utility collateral or sustain 85% take-or-pay penalties during tenant vacancies, their pipelines are functionally dead.</li>
+  <li><strong>Over-Leveraged Wholesalers:</strong> Mid-tier data center developers who rely on building "speculative shells" and waiting for tenants will find the monthly bill on empty space they're still on the hook for to be devastating.</li>
+</ul>
+
+<h3>The Structural Winners</h3>
+
+<ul>
+  <li><strong>The Cash-Rich Hyperscalers:</strong> Tech giants can comfortably absorb these tariffs because they have the immediate demand to utilize 90%+ of their contracted capacity.</li>
+  <li><strong>The Grid Bypassers &amp; Enablers (The "Picks &amp; Shovels"):</strong> Because the utility queue is a massive bottleneck, the smartest play is to look at companies equipping developers to route around it entirely or stabilize local hardware:
+    <ul>
+      <li><strong>GE Vernova (NYSE: GEV):</strong> Onsite gas turbines to help massive facilities bypass the traditional utility queue.</li>
+      <li><strong>Bloom Energy (NYSE: BE):</strong> Solid oxide fuel cells (SOFCs) that let data centers set up independent, on-site microgrids. When developers can't wait years for a local substation upgrade, they drop fuel cells right next to the server racks to generate clean, baseline power immediately. (They just locked in a massive $1.7B capital deal with IDF and Oaktree to deploy this exact tech for Nebius' AI cloud infrastructure).</li>
+      <li><strong>Eaton (NYSE: ETN):</strong> Modular power enclosures and electrical switchgear to protect the hardware from intense AI power spikes.</li>
+    </ul>
+  </li>
+</ul>
+
+<hr>
+
+<h2>Inside the Tech Stack: How Project Fosbury Works</h2>
+
+<p>Instead of trying to scrape raw HTML charts from PJM's front page (which they explicitly block to limit heavy web-scraping), I built a modular data pipeline split into abstract layers: data extractors, automated PDF parsers, a normalization layer, and local storage.</p>
+
+<p>The pipeline uses Python to query the <strong>EIA Open Data API</strong> for real-time electricity demand data by balancing authority, alongside custom scrapers that constantly ingest messy municipal PDF agendas and state-level regulatory dockets across VA SCC, PA PUC, and Ohio PUCO. For larger-scale grid studies, the architecture also supports the PJM Data Miner 2 API when a subscription key is available.</p>
+
+<p>Everything is stored in a local SQLite file (<code>fosbury.db</code>) using Python's built-in <code>sqlite3</code> library — no external ORM needed. Every scraped event is parsed into a standardized Pydantic data model called <code>GridEvent</code>:</p>
+
+<pre><code># Core data model — every scraped event normalizes into this shape
+class GridEvent(BaseModel):
+    event_id: str               # SHA-256 hash of source_url + text excerpt
+    iso_region: str             # e.g. "PJM"
+    state_jurisdiction: str     # e.g. "VA", "OH", "PA", "FEDERAL"
+    entity_target: str          # e.g. "American Electric Power"
+    data_type: str              # QUEUE_MILESTONE, REGULATORY_PROTEST, etc.
+    raw_text_blob: str          # cleaned text excerpt up to 2000 chars
+    metric_delta: int = 0       # quantified delay in calendar days
+    keywords_matched: list[str] = []
+    source_url: str = ""</code></pre>
+
+<p>By tracking the unique <code>event_id</code>, <code>metric_delta</code>, and <code>state_jurisdiction</code> across thousands of dockets, the engine flags exactly when a project's "washout risk" spikes.</p>
+
+<p>Here is the core function that actually reads a regulatory PDF and decides whether it contains a signal worth flagging:</p>
+
+<pre><code># Core signal detection — scans a downloaded regulatory PDF
+def scan_pdf(pdf_bytes: bytes) -> PdfScanResult:
+    """
+    Extracts text from a regulatory PDF and checks it against
+    the keyword list. Two or more matches triggers a flag.
+    """
+    with pdfplumber.open(BytesIO(pdf_bytes)) as pdf:
+        text = "\n".join(page.extract_text() or "" for page in pdf.pages)
+
+    matched = [kw for kw in ALL_KEYWORDS if kw.lower() in text.lower()]
+    metric_delta = _extract_delay_days(text)  # regex pulls month/day figures
+
+    return PdfScanResult(
+        keywords_matched=matched,
+        metric_delta=metric_delta,
+        full_text=text,
+        has_signal=len(matched) >= 2,
+    )
+
+# The AEP Ohio filing matched five keywords:
+# "take-or-pay", "queue withdrawal", "bankable demand",
+# "commercial operation date", "cost allocation"</code></pre>
+
+<p><strong>View the Code on GitHub:</strong> I've open-sourced the core engine for this PJM and municipal queue tracker. You can check out the full database schema, Python scrapers, and setup instructions on my <a href="https://github.com/ljafarieh/grp-public">GitHub Repository</a>. If you're a developer or data scientist, feel free to clone the repo and play around with it, or submit a Pull Request!</p>
+
+<hr>
+
+<h2>Behind the Code</h2>
+
+<p>My name is Luke Jafarieh. I'm a high school track athlete and high jumper out of Delaware. I've been actively trading in a personal brokerage account for the last couple of years, but I got tired of trading on news headlines and broad vibes.</p>
+
+<p>I wanted to find data that was public but buried, fast-moving, and the market hasn't put it together yet. Building this project forced me to move past standard tutorials and learn how to deal with real-world, messy data structures. I'm definitely not an expert software engineer yet, but writing this code has completely changed how I think about both programming and the markets.</p>
+
+<hr>
+
+<h2>What's Next: Automating the Grid Watch</h2>
+
+<p>Right now, my database is running locally, but the sheer volume of municipal PDF agendas and state-level environmental dockets is massive. Over the next few months, I am focusing on scaling this local pipeline into a cloud-based, continuous monitoring engine.</p>
+
+<p>The goal is to automate the extraction of these quiet, local regulatory shifts across the entire PJM grid and push real-time alerts the moment a site transitions from a "speculative proposal" to a "fully collateralized build."</p>
+
+<p>If you are a utility analyst, macro investor, or energy developer and want to help beta-test the automated alert dashboard as I build out the interface, please drop a comment or subscribe to get on the early access list. I'd love to get your thoughts on what metrics matter most to your models!</p>
+
+</body>
+</html>

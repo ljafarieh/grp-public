@@ -36,7 +36,13 @@ _TARGET_SEARCHES = [
     ("Constellation", "Constellation Energy"),
     ("Talen Energy", "Talen Energy"),
     ("nuclear co-location", "Constellation Energy"),
+    # PPL bull-case watchlist — these searches will fire an alert if PA moves
+    # toward a take-or-pay tariff, which would stress-test PPL's 9 GW pipeline.
     ("PPL Electric", "PPL Corporation"),
+    ("PPL Electric Utilities large load", "PPL Corporation"),
+    ("take-or-pay tariff Pennsylvania", "PPL Corporation"),
+    ("large load tariff PPL", "PPL Corporation"),
+    ("data center interconnection Pennsylvania", "PPL Corporation"),
 ]
 
 _FALLBACK_URLS = [
@@ -165,9 +171,17 @@ class PaPUCScraper(BaseHttpExtractor):
 
 
 def _classify(keywords: list[str]) -> str:
+    tariff_kws = {
+        "take-or-pay", "take or pay", "large load tariff", "large-load tariff",
+        "data center tariff", "hyperscale tariff", "load commitment",
+        "bankable demand", "queue deposit", "withdrawal penalty",
+    }
     protest_kws = {"protest", "intervention", "ratepayer", "objection", "show cause"}
     equipment_kws = {"transformer", "switchgear", "supply chain", "equipment", "cooling"}
     lower_kws = {k.lower() for k in keywords}
+    # PPL bull-case threat: PA take-or-pay tariff proceedings are highest priority
+    if lower_kws & tariff_kws:
+        return "PPL_TARIFF_THREAT"
     if lower_kws & protest_kws:
         return "REGULATORY_PROTEST"
     if lower_kws & equipment_kws:

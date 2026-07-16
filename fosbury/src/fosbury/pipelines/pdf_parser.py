@@ -42,6 +42,25 @@ DELAY_KEYWORDS: list[str] = [
     "days extended",
 ]
 
+# PPL bull-case threat keywords — any of these in a PA PUC filing signals
+# that Pennsylvania may be moving toward a take-or-pay tariff, which would
+# stress-test PPL's 9 GW data center pipeline the same way Ohio's did AEP's.
+PPL_WATCHLIST_KEYWORDS: list[str] = [
+    "take-or-pay",
+    "take or pay",
+    "large load tariff",
+    "large-load tariff",
+    "data center tariff",
+    "hyperscale tariff",
+    "load commitment",
+    "financial commitment deposit",
+    "bankable demand",
+    "queue deposit",
+    "speculative load",
+    "withdrawal penalty",
+    "interconnection deposit",
+]
+
 PROTEST_KEYWORDS: list[str] = [
     "protest",
     "intervention",
@@ -68,7 +87,7 @@ EQUIPMENT_KEYWORDS: list[str] = [
     "generator step-up",
 ]
 
-ALL_KEYWORDS = DELAY_KEYWORDS + PROTEST_KEYWORDS + EQUIPMENT_KEYWORDS
+ALL_KEYWORDS = DELAY_KEYWORDS + PROTEST_KEYWORDS + EQUIPMENT_KEYWORDS + PPL_WATCHLIST_KEYWORDS
 
 # ---------------------------------------------------------------------------
 # Delay extraction patterns (normalised to calendar days)
@@ -116,8 +135,8 @@ class PdfScanResult:
 
     @property
     def has_signal(self) -> bool:
-        """True if at least one keyword matched."""
-        return len(self.keywords_matched) > 0
+        """True if at least two keywords matched — prevents single-word false positives."""
+        return len(self.keywords_matched) >= 2
 
     def excerpt(self, max_chars: int = 1000) -> str:
         """Return a trimmed excerpt of the full text."""

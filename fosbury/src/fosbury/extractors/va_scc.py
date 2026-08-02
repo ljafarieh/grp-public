@@ -15,6 +15,7 @@ Arbitrage focus (per GRP document):
 from __future__ import annotations
 
 import hashlib
+import urllib.parse
 from typing import Any
 
 import structlog
@@ -90,7 +91,10 @@ class VirginiaSCCScraper(BaseHttpExtractor):
                         continue
                     seen_doc_ids.add(doc_id)
 
-                    pdf_url = f"{_PDF_BASE}/{filename}"
+                    # VA SCC filenames sometimes contain bare % characters that
+                    # aren't valid percent-encoding (e.g. "89%h01!.PDF").
+                    # Re-encode just the filename portion so httpx doesn't choke.
+                    pdf_url = f"{_PDF_BASE}/{urllib.parse.quote(filename, safe='!.')}"
                     try:
                         resp = self._client.get(
                             pdf_url, timeout=20,

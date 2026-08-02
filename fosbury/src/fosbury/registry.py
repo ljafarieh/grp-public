@@ -250,3 +250,29 @@ register_stage("va_scc", _build_va_scc, "Virginia SCC daily docket — Dominion 
 register_stage("ohio_puco", _build_ohio_puco, "Ohio PUCO — AEP data center load impact studies")
 register_stage("pa_puc", _build_pa_puc, "PA PUC — Constellation/Talen nuclear co-location protests")
 register_stage("ferc", _build_ferc, "FERC eLibrary — Section 205/206 co-location filings")
+
+
+# ---------------------------------------------------------------------------
+# AI/HPC company NTP / ISA queue miner
+# ---------------------------------------------------------------------------
+
+
+def _build_ntp_queue_miner(settings: Settings) -> PipelineStage:
+    from fosbury.extractors.ntp_queue_miner import NTPQueueMiner
+    from fosbury.loaders.grid_event_loader import GridEventLoader
+    from fosbury.transformers.regulatory import RegulatoryTransformer
+
+    settings.ensure_storage_dirs()
+    return PipelineStage(
+        source_key="ntp_queue_miner",
+        extractor=NTPQueueMiner(settings),
+        transformer=RegulatoryTransformer("ntp_queue_miner"),
+        loaders=[GridEventLoader(settings.sqlite_path)],
+    )
+
+
+register_stage(
+    "ntp_queue_miner",
+    _build_ntp_queue_miner,
+    "PJM queue NTP/ISA transitions + FERC dockets for CORZ, IREN, Keel",
+)

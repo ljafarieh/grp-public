@@ -31,10 +31,13 @@ from fosbury.pipelines.pdf_parser import scan_pdf
 log = structlog.get_logger()
 
 _SEARCH_BASE = "https://elibrary.ferc.gov/eLibrary/search"
-_SEARCH_PARAMS_BASE = {
-    "conductorType": "case",
-    "format": "json",
-}
+
+# eLibrary is an Angular SPA — search results are injected by JS.
+# We use Playwright to drive the search, then parse the rendered HTML.
+_BROWSER_UA = (
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+    "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36"
+)
 
 _TARGET_QUERIES = [
     "co-location nuclear behind-the-meter",
@@ -65,63 +68,78 @@ class FERCScraper(BaseHttpExtractor):
         super().__init__(settings)
 
     def _live_extract(self) -> list[dict[str, Any]]:
+        try:
+            from playwright.sync_api import sync_playwright
+        except ImportError:
+            log.warning("ferc.playwright_missing")
+            return []
+
         events: list[dict[str, Any]] = []
 
-        for query in _TARGET_QUERIES:
-            params = {
-                "query": query,
-                "dateFrom": "",
-                "dateTo": "",
-                "docType": "Order",
-            }
-            log.info("ferc.search", query=query)
+        with sync_playwright() as pw:
+            browser = pw.chromium.launch(headless=True)
+            context = browser.new_context(user_agent=_BROWSER_UA)
+            page = context.new_page()
 
-            try:
-                resp = self._client.get(_SEARCH_BASE, params=params)
-                resp.raise_for_status()
-                html = resp.text
-            except Exception as exc:
-                log.warning("ferc.search_failed", query=query, error=str(exc))
-                continue
-
-            soup = BeautifulSoup(html, "html.parser")
-
-            for link in soup.find_all("a", href=True):
-                href: str = link["href"]
-                link_text = link.get_text(strip=True).lower()
-
-                if not href.lower().endswith(".pdf"):
-                    continue
-
-                matched_entity = next(
-                    (full for key, full in _ENTITY_MAP.items() if key in link_text or key in href.lower()),
-                    None,
-                )
-
-                pdf_url = href if href.startswith("http") else f"https://elibrary.ferc.gov{href}"
-                log.debug("ferc.downloading_pdf", url=pdf_url)
-
+            for query in _TARGET_QUERIES:
+                log.info("ferc.search", query=query)
                 try:
-                    resp = self._client.get(pdf_url)
-                    resp.raise_for_status()
-                    result = scan_pdf(resp.content)
+                    page.goto(_SEARCH_BASE, wait_until="domcontentloaded", timeout=20000)
+                    for sel in [
+                        "input[type='search']", "input[placeholder*='search' i]",
+                        "input[id*='search' i]", "input[name*='query' i]",
+                    ]:
+                        try:
+                            page.fill(sel, query, timeout=3000)
+                            break
+                        except Exception:
+                            continue
+                    page.keyboard.press("Enter")
+                    page.wait_for_load_state("networkidle", timeout=15000)
+                    html = page.content()
                 except Exception as exc:
-                    log.warning("ferc.pdf_failed", url=pdf_url, error=str(exc))
+                    log.warning("ferc.search_failed", query=query, error=str(exc))
                     continue
 
-                if not result.has_signal:
-                    continue
+                soup = BeautifulSoup(html, "html.parser")
+                for link in soup.find_all("a", href=True):
+                    href: str = link["href"]
+                    link_text = link.get_text(strip=True).lower()
 
-                event_id = hashlib.sha256(
-                    f"{pdf_url}:{result.full_text[:200]}".encode()
-                ).hexdigest()[:24]
+                    if not href.lower().endswith(".pdf"):
+                        continue
 
-                # Avoid duplicates within same run
-                if any(e["event_id"] == event_id for e in events):
-                    continue
+                    matched_entity = next(
+                        (full for key, full in _ENTITY_MAP.items()
+                         if key in link_text or key in href.lower()),
+                        None,
+                    )
 
-                events.append(
-                    {
+                    pdf_url = (
+                        href if href.startswith("http")
+                        else f"https://elibrary.ferc.gov{href}"
+                    )
+                    log.debug("ferc.downloading_pdf", url=pdf_url)
+
+                    try:
+                        resp = self._client.get(pdf_url)
+                        resp.raise_for_status()
+                        result = scan_pdf(resp.content)
+                    except Exception as exc:
+                        log.warning("ferc.pdf_failed", url=pdf_url, error=str(exc))
+                        continue
+
+                    if not result.has_signal:
+                        continue
+
+                    event_id = hashlib.sha256(
+                        f"{pdf_url}:{result.full_text[:200]}".encode()
+                    ).hexdigest()[:24]
+
+                    if any(e["event_id"] == event_id for e in events):
+                        continue
+
+                    events.append({
                         "event_id": event_id,
                         "iso_region": "PJM",
                         "state_jurisdiction": "FEDERAL",
@@ -131,9 +149,11 @@ class FERCScraper(BaseHttpExtractor):
                         "metric_delta": result.metric_delta,
                         "keywords_matched": result.keywords_matched,
                         "source_url": pdf_url,
-                    }
-                )
-                log.info("ferc.signal_found", entity=matched_entity, keywords=result.keywords_matched[:3])
+                    })
+                    log.info("ferc.signal_found", entity=matched_entity,
+                             keywords=result.keywords_matched[:3])
+
+            browser.close()
 
         log.info("ferc.done", events=len(events))
         return events

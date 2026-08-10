@@ -276,3 +276,29 @@ register_stage(
     _build_ntp_queue_miner,
     "PJM queue NTP/ISA transitions + FERC dockets for CORZ, IREN, Keel",
 )
+
+
+# ---------------------------------------------------------------------------
+# PJM RTEP state infrastructure reports
+# ---------------------------------------------------------------------------
+
+
+def _build_pjm_rtep(settings: Settings) -> PipelineStage:
+    from fosbury.extractors.pjm_rtep import PjmRtepScraper
+    from fosbury.loaders.grid_event_loader import GridEventLoader
+    from fosbury.transformers.regulatory import RegulatoryTransformer
+
+    settings.ensure_storage_dirs()
+    return PipelineStage(
+        source_key="pjm_rtep",
+        extractor=PjmRtepScraper(settings),
+        transformer=RegulatoryTransformer("pjm_rtep"),
+        loaders=[GridEventLoader(settings.sqlite_path)],
+    )
+
+
+register_stage(
+    "pjm_rtep",
+    _build_pjm_rtep,
+    "PJM RTEP state reports — large load MW forecast + capacity auction scarcity signals",
+)

@@ -1,19 +1,24 @@
 """Pennsylvania Public Utility Commission (PaPUC) — docket scraper.
 
-Live target:
-    https://www.puc.pa.gov/filing-resources/online-filings/
+Live targets:
+    Document search: https://www.puc.pa.gov/search/document-search/
+    eFiling portal:  https://efiling.puc.pa.gov/  (login required to file)
+    Direct dockets:  https://www.puc.pa.gov/docket/<docket-no>
+    Direct PDFs:     https://www.puc.pa.gov/pcdocs/<id>.pdf
 
-The PA PUC document management system (DMS) has an unreliable hostname.
-This extractor uses the main PUC filing search page via Playwright, then
-collects PDFs related to Constellation Energy and Talen Energy co-location
-and nuclear restart filings.
+The old e-filing search URL (/filing-resources/online-filings/e-filing-search/)
+was removed when PA PUC restructured their site.  This extractor now uses:
+  1. Direct PDF scans of known high-signal dockets (no auth required)
+  2. Playwright-driven document search as a fallback for keyword queries
 
-No credentials required — PA PUC filings are fully public.
+Key docket being monitored:
+    M-2025-3054271 — En Banc Hearing on Interconnection and Tariffs for
+    Large Load Customers (data centers).  Testimony filed by Amazon, Google,
+    PPL Electric, FirstEnergy, PECO, Duquesne Light, and others.
 
 Arbitrage focus:
-    Constellation (CEG) and Talen (TLN) nuclear co-location protest
-    filings at PA PUC track direct regulatory risk to AI data center
-    power purchase agreement revenues.
+    PPL Electric take-or-pay tariff proceedings and nuclear co-location
+    protests (Constellation/Talen) that affect AI data center power costs.
 """
 
 from __future__ import annotations
@@ -29,25 +34,55 @@ from fosbury.pipelines.pdf_parser import scan_pdf
 
 log = structlog.get_logger()
 
-# Primary search portal — more stable than the DMS subdomain
-_SEARCH_URL = "https://www.puc.pa.gov/filing-resources/online-filings/e-filing-search/"
+# Working document search (replaces the removed e-filing search page)
+_SEARCH_URL = "https://www.puc.pa.gov/search/document-search/"
+
+_FALLBACK_URLS = [
+    "https://efiling.puc.pa.gov/",
+]
 
 _TARGET_SEARCHES = [
     ("Constellation", "Constellation Energy"),
     ("Talen Energy", "Talen Energy"),
     ("nuclear co-location", "Constellation Energy"),
-    # PPL bull-case watchlist — these searches will fire an alert if PA moves
-    # toward a take-or-pay tariff, which would stress-test PPL's 9 GW pipeline.
+    # PPL bull-case watchlist
     ("PPL Electric", "PPL Corporation"),
-    ("PPL Electric Utilities large load", "PPL Corporation"),
-    ("take-or-pay tariff Pennsylvania", "PPL Corporation"),
     ("large load tariff PPL", "PPL Corporation"),
     ("data center interconnection Pennsylvania", "PPL Corporation"),
 ]
 
-_FALLBACK_URLS = [
-    "https://efiling.puc.pa.gov/dockets/search",
-    "https://www.puc.pa.gov/general/docSearch/default.aspx",
+# ---------------------------------------------------------------------------
+# Direct PDF targets — known high-signal documents, scraped every run.
+# These bypass the search UI entirely and are always available publicly.
+# Docket M-2025-3054271: En Banc Hearing on Interconnection and Tariffs
+# for Large Load Customers (data centers). Filed 2025.
+# ---------------------------------------------------------------------------
+_DIRECT_PDF_TARGETS: list[dict] = [
+    {
+        "url": "https://www.puc.pa.gov/pcdocs/1875751.pdf",
+        "entity": "PPL Corporation",
+        "description": "PPL Electric en banc testimony — large load interconnection & tariffs",
+    },
+    {
+        "url": "https://www.puc.pa.gov/pcdocs/1875773.pdf",
+        "entity": "Amazon Data Services",
+        "description": "Amazon en banc testimony — large load interconnection & tariffs",
+    },
+    {
+        "url": "https://www.puc.pa.gov/pcdocs/1875806.pdf",
+        "entity": "Google LLC",
+        "description": "Google en banc testimony — large load interconnection & tariffs",
+    },
+    {
+        "url": "https://www.puc.pa.gov/pcdocs/1875805.pdf",
+        "entity": "FirstEnergy Pennsylvania",
+        "description": "FirstEnergy en banc testimony — large load interconnection & tariffs",
+    },
+    {
+        "url": "https://www.puc.pa.gov/pcdocs/1875750.pdf",
+        "entity": "Data Center Coalition",
+        "description": "Data Center Coalition en banc testimony — large load interconnection",
+    },
 ]
 
 
@@ -69,7 +104,47 @@ class PaPUCScraper(BaseHttpExtractor):
         events: list[dict[str, Any]] = []
         seen: set[str] = set()
 
-        # Try primary URL, fall back if it fails
+        # -- Direct PDF scan (always runs, no browser needed) ----------------
+        for target in _DIRECT_PDF_TARGETS:
+            pdf_url = target["url"]
+            if pdf_url in seen:
+                continue
+            seen.add(pdf_url)
+            try:
+                resp = self._client.get(
+                    pdf_url, timeout=20,
+                    headers={"Accept": "application/pdf,*/*", "User-Agent": "Mozilla/5.0"},
+                )
+                resp.raise_for_status()
+                result = scan_pdf(resp.content)
+            except Exception as exc:
+                log.warning("pa_puc.direct_pdf_failed", url=pdf_url, error=str(exc))
+                continue
+
+            if not result.has_signal:
+                log.debug("pa_puc.direct_pdf_no_signal", url=pdf_url,
+                          keywords=result.keywords_matched)
+                continue
+
+            event_id = hashlib.sha256(
+                f"{pdf_url}:{result.full_text[:200]}".encode()
+            ).hexdigest()[:24]
+
+            events.append({
+                "event_id": event_id,
+                "iso_region": "PJM",
+                "state_jurisdiction": "PA",
+                "entity_target": target["entity"],
+                "data_type": _classify(result.keywords_matched),
+                "raw_text_blob": result.excerpt(1500),
+                "metric_delta": result.metric_delta,
+                "keywords_matched": result.keywords_matched,
+                "source_url": pdf_url,
+            })
+            log.info("pa_puc.direct_signal", entity=target["entity"],
+                     keywords=result.keywords_matched[:4])
+
+        # -- Browser-driven keyword search -----------------------------------
         search_urls = [_SEARCH_URL] + _FALLBACK_URLS
 
         with sync_playwright() as pw:

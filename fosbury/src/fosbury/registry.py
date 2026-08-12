@@ -302,3 +302,29 @@ register_stage(
     _build_pjm_rtep,
     "PJM RTEP state reports — large load MW forecast + capacity auction scarcity signals",
 )
+
+
+# ---------------------------------------------------------------------------
+# SEC EDGAR — CORZ, IREN, KEEL filing monitor
+# ---------------------------------------------------------------------------
+
+
+def _build_edgar_sec(settings: Settings) -> PipelineStage:
+    from fosbury.extractors.edgar_sec import EdgarSecScraper
+    from fosbury.loaders.grid_event_loader import GridEventLoader
+    from fosbury.transformers.regulatory import RegulatoryTransformer
+
+    settings.ensure_storage_dirs()
+    return PipelineStage(
+        source_key="edgar_sec",
+        extractor=EdgarSecScraper(settings),
+        transformer=RegulatoryTransformer("edgar_sec"),
+        loaders=[GridEventLoader(settings.sqlite_path)],
+    )
+
+
+register_stage(
+    "edgar_sec",
+    _build_edgar_sec,
+    "SEC EDGAR 8-K/10-Q monitor — CORZ, IREN, KEEL grid/interconnection disclosures",
+)
